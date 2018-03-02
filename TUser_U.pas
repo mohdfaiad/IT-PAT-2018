@@ -2,7 +2,7 @@ unit TUser_U;
 
 interface
 
-uses SysUtils;
+uses DateUtils, SysUtils;
 
 type
   TUserType = (Employee = 1, Manager);
@@ -53,8 +53,7 @@ end;
 
 function TUser.GetDaysRegistered: integer;
 begin
-  // TODO: return days
-  result := Date() - self.registerDate;
+  result := DaysBetween(Date(), self.registerDate);
 end;
 
 function TUser.GetFirstName: string;
