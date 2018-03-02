@@ -47,6 +47,9 @@
 				<Form>frmTemplate</Form>
 			</DCCReference>
 			<DCCReference Include="TUser_U.pas"/>
+			<DCCReference Include="TForm_Employee_Home.pas">
+				<Form>frmEmployeeHome</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
