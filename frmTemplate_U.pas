@@ -22,4 +22,16 @@ implementation
 
 {$R *.dfm}
 
+{ TfrmTemplate }
+
+function TfrmTemplate.getUser: TUser;
+begin
+  result := self.currentUser;
+end;
+
+procedure TfrmTemplate.setUser(user: TUser);
+begin
+  self.currentUser := user;
+end;
+
 end.
