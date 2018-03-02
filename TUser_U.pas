@@ -13,9 +13,9 @@ type
       firstName: string;
       lastname: string;
       userType: TUserType;
-      registerDate: date;
+      registerDate: TDateTime;
     public
-      constructor Create(id: integer; firstname, lastname: string; userType: TUserType; registerDate: date);
+      constructor Create(id: integer; firstname, lastname: string; userType: TUserType; registerDate: TDateTime);
 
       // Accessors
       function GetID: integer;
@@ -23,7 +23,7 @@ type
       function GetLastName: string;
       function GetFullName: string;
       function GetType: TUserType;
-      function GetDateRegistered: date;
+      function GetDateRegistered: TDateTime;
       function GetDaysRegistered: integer;
       function ToString: string;
 
@@ -33,5 +33,68 @@ type
   end;
 
 implementation
+
+{ TUser }
+
+constructor TUser.Create(id: integer; firstname, lastname: string;
+  userType: TUserType; registerDate: TDateTime);
+begin
+  self.id := id;
+  self.firstName := firstName;
+  self.lastname := lastName;
+  self.userType := userType;
+  self.registerDate := registerdate;
+end;
+
+function TUser.GetDateRegistered: TDateTime;
+begin
+  result := self.registerDate;
+end;
+
+function TUser.GetDaysRegistered: integer;
+begin
+  // TODO: return days
+  result := Date() - self.registerDate;
+end;
+
+function TUser.GetFirstName: string;
+begin
+  result := self.firstName;
+end;
+
+function TUser.GetFullName: string;
+begin
+  result := Format('%s %s', [self.firstName, self.lastname]);
+end;
+
+function TUser.GetID: integer;
+begin
+  result := self.id;
+end;
+
+function TUser.GetLastName: string;
+begin
+  result := self.lastname;
+end;
+
+function TUser.GetType: TUserType;
+begin
+  result := self.userType;
+end;
+
+procedure TUser.SetFirstName(firstname: string);
+begin
+  self.firstName := firstName;
+end;
+
+procedure TUser.SetLastName(lastname: string);
+begin
+  self.lastname := lastname;
+end;
+
+function TUser.ToString: string;
+begin
+  result := Format('%s [%f] (Account is %f days old)', [self.GetFullName, self.GetDaysRegistered, self.id]);
+end;
 
 end.
