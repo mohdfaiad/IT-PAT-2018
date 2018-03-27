@@ -4,10 +4,13 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, TUser_U;
+  Dialogs, TUser_U, StdCtrls, ExtCtrls;
 
 type
   TfrmTemplate = class(TForm)
+    pnlHeader: TPanel;
+    btnLogout: TButton;
+    btnViewAccount: TButton;
   private
     currentUser: TUser;
   public
@@ -32,6 +35,7 @@ end;
 procedure TfrmTemplate.setUser(user: TUser);
 begin
   self.currentUser := user;
+  self.pnlHeader.Caption := Format('Welcome %s', [self.currentUser.GetFirstName]);
 end;
 
 end.
