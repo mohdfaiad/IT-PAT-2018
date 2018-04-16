@@ -54,6 +54,8 @@
 				<Form>data_module</Form>
 				<DesignClass>TDataModule</DesignClass>
 			</DCCReference>
+			<DCCReference Include="TItem_U.pas"/>
+			<DCCReference Include="TOrder_U.pas"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>

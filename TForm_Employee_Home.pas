@@ -34,7 +34,7 @@ begin
   user := TUser.Create(1, 'Stephan', 'Cilliers', employee, now());
   self.setUser(user);
 
-  item := TItem.Create(1, 'Big Daddy', 'Burger');
+  item := TItem.Create(1, 'Big Daddy', 'Burger', 24.99);
   showmessage(item.ToString);
 
 
