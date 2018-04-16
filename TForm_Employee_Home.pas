@@ -20,18 +20,24 @@ var
 
 implementation
 
-uses TUser_U;
+uses TUser_U, TItem_U;
 
 {$R *.dfm}
 
 procedure TfrmEmployeeHome.FormCreate(Sender: TObject);
 var
   user: TUser;
+  item: TItem;
 begin
   inherited;
   // Test
   user := TUser.Create(1, 'Stephan', 'Cilliers', employee, now());
   self.setUser(user);
+
+  item := TItem.Create(1, 'Big Daddy', 'Burger');
+  showmessage(item.ToString);
+
+
 end;
 
 end.

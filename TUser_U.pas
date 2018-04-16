@@ -25,12 +25,16 @@ type
       function GetType: TUserType;
       function GetDateRegistered: TDateTime;
       function GetDaysRegistered: integer;
-      function ToString: string;
 
       // Mutators
       procedure SetFirstName(firstname: string);
       procedure SetLastName(lastname: string);
+
+      // Auxilary
+      function ToString: string;
   end;
+
+  TUserArray = array of TUser;
 
 implementation
 
@@ -93,7 +97,7 @@ end;
 
 function TUser.ToString: string;
 begin
-  result := Format('%s [%f] (Account is %f days old)', [self.GetFullName, self.GetDaysRegistered, self.id]);
+  result := Format('[%s] %s (Account is %s days old)', [inttostr(self.id), self.GetFullName, inttostr(self.GetDaysRegistered)]);
 end;
 
 end.
