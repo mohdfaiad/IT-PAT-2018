@@ -20,7 +20,7 @@ var
 
 implementation
 
-uses TUser_U, TItem_U;
+uses TUser_U, TItem_U, TOrder_U;
 
 {$R *.dfm}
 
@@ -28,6 +28,8 @@ procedure TfrmEmployeeHome.FormCreate(Sender: TObject);
 var
   user: TUser;
   item: TItem;
+  arrItems: TItemArray;
+  order: TOrder;
 begin
   inherited;
   // Test
@@ -35,8 +37,12 @@ begin
   self.setUser(user);
 
   item := TItem.Create(1, 'Big Daddy', 'Burger', 24.99);
-  showmessage(item.ToString);
 
+  setLength(arrItems, 2);
+  arrItems[0] := item;
+  arrItems[1] := item;
+  order := TOrder.Create(1, user, 'Ordered', date(), arrItems);
+  showmessage(order.ToString);
 
 end;
 

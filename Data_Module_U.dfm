@@ -3,10 +3,9 @@ object data_module: Tdata_module
   Height = 217
   Width = 297
   object connection: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;Persis' +
-      't Security Info=False'
+      't Security Info=False;'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'

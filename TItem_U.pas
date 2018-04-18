@@ -62,7 +62,7 @@ end;
 
 function TItem.ToString: string;
 begin
-  result := Format('[%s] Title: %s, Category: %s, Price: %.2f', [inttostr(id), title, category, price]);
+  result := Format('[%s] Title: %s, Category: %s, Price: %m', [inttostr(id), title, category, price]);
 end;
 
 end.
