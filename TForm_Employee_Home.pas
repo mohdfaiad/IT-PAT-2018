@@ -10,6 +10,8 @@ type
   TfrmEmployeeHome = class(TfrmTemplate)
     procedure FormCreate(Sender: TObject);
   private
+    const
+      TAG: string = 'EMPLOYEE_HOME';
     { Private declarations }
   public
     { Public declarations }
@@ -20,7 +22,7 @@ var
 
 implementation
 
-uses TUser_U, TItem_U, TOrder_U;
+uses TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U;
 
 {$R *.dfm}
 
@@ -42,7 +44,12 @@ begin
   arrItems[0] := item;
   arrItems[1] := item;
   order := TOrder.Create(1, user, 'Ordered', date(), arrItems);
-  showmessage(order.ToString);
+//  showmessage(order.ToString);
+
+  TLogger.clear;
+  TLogger.log(TAG, debug, 'Session started');
+
+  data_module.test;
 
 end;
 

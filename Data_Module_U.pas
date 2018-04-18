@@ -3,7 +3,7 @@ unit Data_Module_U;
 interface
 
 uses
-  SysUtils, Classes, DB, ADODB;
+  SysUtils, Classes, DB, ADODB, Logger_U;
 
 type
   Tdata_module = class(TDataModule)
@@ -11,12 +11,15 @@ type
     qry: TADOQuery;
   private
     { Private declarations }
+    const
+      TAG: string = 'DATA_MODULE';
+
     class function queryDatabase(query: string; var qry: TADOQuery): TADOQuery;
     class function modifyDatabase(sql: string; var qry: TADOQuery): boolean;
     class function getEntityByID(table, id: string; var qry: TADOQuery): boolean;
   public
     { Public declarations }
-
+    procedure test;
   end;
 
 var
@@ -55,8 +58,7 @@ begin
   except
     on E: Exception do
     begin
-//      Showmessage('Something went wrong... Check logs for more information.');
-//      TLogger.logException(TAG, 'modifyDatabase ' + sql, e);
+      TLogger.logException(TAG, 'modifyDatabase ' + sql, e);
       result := false;
       Exit;
     end;
@@ -77,13 +79,16 @@ begin
   except
     on E: Exception do
     begin
-//      Showmessage('Something went wrong... Check logs for more information.');
-//      TLogger.logException(TAG, 'queryDatabase ' + query, e);
+      TLogger.logException(TAG, 'queryDatabase ' + query, e);
       Exit;
     end;
   end;
 end;
 
-
+procedure Tdata_module.test;
+begin
+  Tdata_module.getEntityByID('Item', '1', qry);
+  TLogger.log(TAG, debug, qry.Fields[1].asstring);
+end;
 
 end.
