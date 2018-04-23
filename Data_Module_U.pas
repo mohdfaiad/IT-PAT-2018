@@ -17,6 +17,7 @@ type
     class function queryDatabase(query: string; var qry: TADOQuery): TADOQuery;
     class function modifyDatabase(sql: string; var qry: TADOQuery): boolean;
     class function getEntityByID(table, id: string; var qry: TADOQuery): boolean;
+    class function getLastID(var query: TADOQuery): Integer;
   public
     { Public declarations }
     procedure test;
@@ -82,6 +83,22 @@ begin
       TLogger.logException(TAG, 'queryDatabase ' + query, e);
       Exit;
     end;
+  end;
+end;
+
+// http://www.swissdelphicenter.com/en/showcode.php?id=1749
+class function Tdata_module.getLastID(var query: TADOQuery): Integer;
+begin
+  result := -1;
+  try
+    query.sql.clear;
+    query.sql.Add('SELECT @@IDENTITY');
+    query.Active := true;
+    query.First;
+    result := query.Fields.Fields[0].AsInteger;
+  finally
+    query.Active := false;
+    query.sql.clear;
   end;
 end;
 
