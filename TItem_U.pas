@@ -19,6 +19,7 @@ type
       function GetID: integer;
       function GetTitle: string;
       function GetPrice: double;
+      function GetNote: string;
 
       // Mutators
       procedure SetNote(note: string);
@@ -43,6 +44,17 @@ end;
 function TItem.GetID: integer;
 begin
   result := self.id;
+end;
+
+function TItem.GetNote: string;
+begin
+  if self.note <> nil then
+  begin
+    result := '';
+  end else
+  begin
+    result := self.note;
+  end;
 end;
 
 function TItem.GetPrice: double;
