@@ -57,6 +57,7 @@
 			<DCCReference Include="TItem_U.pas"/>
 			<DCCReference Include="TOrder_U.pas"/>
 			<DCCReference Include="Logger_U.pas"/>
+			<DCCReference Include="Utilities_U.pas"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
