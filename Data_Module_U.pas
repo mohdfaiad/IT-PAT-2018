@@ -14,12 +14,13 @@ type
     const
       TAG: string = 'DATA_MODULE';
 
+
+  public
+    { Public declarations }
     class function queryDatabase(query: string; var qry: TADOQuery): TADOQuery;
     class function modifyDatabase(sql: string; var qry: TADOQuery): boolean;
     class function getEntityByID(table, id: string; var qry: TADOQuery): boolean;
-    class function getLastID(var query: TADOQuery): Integer;
-  public
-    { Public declarations }
+    class function getLastInsertedID(var query: TADOQuery): Integer;
     procedure test;
   end;
 
@@ -87,7 +88,7 @@ begin
 end;
 
 // http://www.swissdelphicenter.com/en/showcode.php?id=1749
-class function Tdata_module.getLastID(var query: TADOQuery): Integer;
+class function Tdata_module.getLastInsertedID(var query: TADOQuery): Integer;
 begin
   result := -1;
   try

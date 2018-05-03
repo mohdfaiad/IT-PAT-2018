@@ -48,13 +48,7 @@ end;
 
 function TItem.GetNote: string;
 begin
-  if self.note <> nil then
-  begin
-    result := '';
-  end else
-  begin
-    result := self.note;
-  end;
+  result := self.note;
 end;
 
 function TItem.GetPrice: double;
