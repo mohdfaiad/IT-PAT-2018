@@ -9,6 +9,7 @@ type
   Tdata_module = class(TDataModule)
     connection: TADOConnection;
     qry: TADOQuery;
+    tblUsers: TADOTable;
   private
     { Private declarations }
     const

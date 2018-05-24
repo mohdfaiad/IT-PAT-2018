@@ -15,5 +15,15 @@
     <Transaction>2018/04/16 13:55:05.177.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\TOrder_U.pas</Transaction>
     <Transaction>2018/04/18 16:05:02.131.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\Logger_U.pas</Transaction>
     <Transaction>2018/04/23 13:39:30.442.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\Utilities_U.pas</Transaction>
+    <Transaction>2018/05/24 08:33:16.741.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\TForm_Employee_Home.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.pas</Transaction>
+    <Transaction>2018/05/24 08:33:16.741.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\TForm_Employee_Home.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.dfm</Transaction>
+    <Transaction>2018/05/24 08:49:55.521.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit2.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Authenticate_U.pas</Transaction>
+    <Transaction>2018/05/24 08:49:55.521.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit2.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Authenticate_U.dfm</Transaction>
+    <Transaction>2018/05/24 08:50:04.483.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home_U.pas</Transaction>
+    <Transaction>2018/05/24 08:50:04.483.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home_U.dfm</Transaction>
+    <Transaction>2018/05/24 10:40:02.434.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Manager_Home_U.pas</Transaction>
+    <Transaction>2018/05/24 10:40:02.434.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Manager_Home_U.dfm</Transaction>
+    <Transaction>2018/05/24 11:56:24.116.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\New_User_U.pas</Transaction>
+    <Transaction>2018/05/24 11:56:24.116.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\New_User_U.dfm</Transaction>
   </Transactions>
 </BorlandProject>

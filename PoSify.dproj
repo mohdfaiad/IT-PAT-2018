@@ -47,7 +47,7 @@
 				<Form>frmTemplate</Form>
 			</DCCReference>
 			<DCCReference Include="TUser_U.pas"/>
-			<DCCReference Include="TForm_Employee_Home.pas">
+			<DCCReference Include="Employee_Home_U.pas">
 				<Form>frmEmployeeHome</Form>
 			</DCCReference>
 			<DCCReference Include="Data_Module_U.pas">
@@ -58,6 +58,15 @@
 			<DCCReference Include="TOrder_U.pas"/>
 			<DCCReference Include="Logger_U.pas"/>
 			<DCCReference Include="Utilities_U.pas"/>
+			<DCCReference Include="Authenticate_U.pas">
+				<Form>frmAuthenticate</Form>
+			</DCCReference>
+			<DCCReference Include="Manager_Home_U.pas">
+				<Form>frmManagerHome</Form>
+			</DCCReference>
+			<DCCReference Include="New_User_U.pas">
+				<Form>frmNewUser</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>

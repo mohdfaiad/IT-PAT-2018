@@ -3,6 +3,7 @@ object data_module: Tdata_module
   Height = 217
   Width = 297
   object connection: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;Persis' +
       't Security Info=False;'
@@ -17,5 +18,11 @@ object data_module: Tdata_module
     Parameters = <>
     Left = 136
     Top = 96
+  end
+  object tblUsers: TADOTable
+    Connection = connection
+    TableName = 'Users'
+    Left = 208
+    Top = 128
   end
 end
