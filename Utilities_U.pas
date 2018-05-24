@@ -12,9 +12,12 @@ type
     public
       // User
       class function loginUser(userID, password: string; var user: TUser; hashed: boolean = false): boolean;
-      class function newUser(var user: TUser; var password: string; firstname, lastname: string): boolean;
+      class function newUser(var user: TUser; password: string; firstname, lastname: string; userType: TUserType; registerDate: TDateTime): boolean;
       class function changePassword(user: TUser; oldPassword, newPassword: string): boolean;
       class function updateUserInformation(user: TUser; var newUser: TUser): boolean;
+
+      class function getEmployees(var arrEmployees: TUserArray): boolean;
+      class function removeUser(user: TUser): boolean;
 
       // Item
       class function newItem(var item: TItem; title, category: string; price: double): boolean;
@@ -55,6 +58,33 @@ begin
   end else
   begin
     TLogger.log(TAG, Debug, 'Failed to change password of user with ID: ' + user.getID);
+  end;
+end;
+
+class function Utilities.getEmployees(var arrEmployees: TUserArray): boolean;
+var
+  qry: TADOQuery;
+  user: TUser;
+begin
+  try
+    qry := data_module.queryDatabase('SELECT * FROM Users WHERE Type = 1 ORDER BY LastName', data_module.qry);
+
+    while not qry.Eof do
+    begin
+      setLength(arrEmployees, length(arrEmployees)+1);
+      user := TUser.Create(
+        qry.FieldByName('ID').AsString,
+        qry.FieldByName('FirstName').AsString,
+        qry.FieldByName('LastName').AsString,
+        TUserType(qry.FieldByName('Type').AsInteger),
+        qry.FieldByName('RegisterDate').AsDateTime
+      );
+      arrEmployees[length(arrEmployees)-1] := user;
+      qry.Next;
+    end;
+    result := true;
+  except
+    result := false;
   end;
 end;
 
@@ -128,10 +158,22 @@ begin
 
 end;
 
-class function Utilities.newUser(var user: TUser; var password: string;
-  firstname, lastname: string): boolean;
+class function Utilities.newUser(var user: TUser; password: string;
+  firstname, lastname: string; userType: TUserType; registerDate: TDateTime): boolean;
 begin
+  // password := getMD5Hash(password); // TODO:
+  result := data_module.modifyDatabase(Format('INSERT INTO Users (FirstName, LastName, Type, RegisterDate) VALUES ("%s", "%s", %s, #%s#)', [
+    firstName,
+    lastName,
+    inttostr(ord(userType)),
+    datetostr(registerdate)
+  ]), data_module.qry);
 
+end;
+
+class function Utilities.removeUser(user: TUser): boolean;
+begin
+  result := data_module.modifyDatabase(Format('DELETE FROM Users WHERE ID = %s', [user.GetID]), data_module.qry);
 end;
 
 class function Utilities.updateUserInformation(user: TUser;

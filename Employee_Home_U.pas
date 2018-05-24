@@ -13,6 +13,7 @@ type
     const
       TAG: string = 'EMPLOYEE_HOME';
     { Private declarations }
+    procedure test;
   public
     { Public declarations }
   end;
@@ -27,14 +28,19 @@ uses TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U;
 {$R *.dfm}
 
 procedure TfrmEmployeeHome.FormCreate(Sender: TObject);
+begin
+  inherited;
+  if sender = nil then
+    test
+end;
+
+procedure TfrmEmployeeHome.test;
 var
   user: TUser;
   item: TItem;
   arrItems: TItemArray;
   order: TOrder;
 begin
-  inherited;
-  // Test
   user := TUser.Create('1', 'Stephan', 'Cilliers', employee, now());
   self.setUser(user);
 
@@ -50,7 +56,6 @@ begin
   TLogger.log(TAG, debug, 'Session started');
 
   data_module.test;
-
 end;
 
 end.
