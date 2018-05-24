@@ -9,16 +9,16 @@ type
 
   TUser = class(TObject)
     private
-      id: integer;  // TODO: make IDs string
+      id: string;  // TODO: make IDs string
       firstName: string;
       lastname: string;
       userType: TUserType;
       registerDate: TDateTime;
     public
-      constructor Create(id: integer; firstname, lastname: string; userType: TUserType; registerDate: TDateTime);
+      constructor Create(id: string; firstname, lastname: string; userType: TUserType; registerDate: TDateTime);
 
       // Accessors
-      function GetID: integer;
+      function GetID: string;
       function GetFirstName: string;
       function GetLastName: string;
       function GetFullName: string;
@@ -40,7 +40,7 @@ implementation
 
 { TUser }
 
-constructor TUser.Create(id: integer; firstname, lastname: string;
+constructor TUser.Create(id: string; firstname, lastname: string;
   userType: TUserType; registerDate: TDateTime);
 begin
   self.id := id;
@@ -70,7 +70,7 @@ begin
   result := Format('%s %s', [self.firstName, self.lastname]);
 end;
 
-function TUser.GetID: integer;
+function TUser.GetID: string;
 begin
   result := self.id;
 end;
@@ -97,7 +97,7 @@ end;
 
 function TUser.ToString: string;
 begin
-  result := Format('[%s] %s (Account is %s days old)', [inttostr(self.id), self.GetFullName, inttostr(self.GetDaysRegistered)]);
+  result := Format('[%s] %s (Account is %s days old)', [self.id, self.GetFullName, inttostr(self.GetDaysRegistered)]);
 end;
 
 end.

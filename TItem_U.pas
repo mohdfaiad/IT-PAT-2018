@@ -7,16 +7,16 @@ uses SysUtils;
 type
   TItem = class(TObject)
     private
-      id: integer;
+      id: string;
       title: string;
       category: string;
       price: double;
       note: string;
     public
-      constructor Create(id: integer; title, category: string; price: double);
+      constructor Create(id: string; title, category: string; price: double);
 
       // Accessors
-      function GetID: integer;
+      function GetID: string;
       function GetTitle: string;
       function GetPrice: double;
       function GetNote: string;
@@ -33,7 +33,7 @@ implementation
 
 { TItem }
 
-constructor TItem.Create(id: integer; title, category: string; price: double);
+constructor TItem.Create(id: string; title, category: string; price: double);
 begin
   self.id := id;
   self.title := title;
@@ -41,7 +41,7 @@ begin
   self.price := price;
 end;
 
-function TItem.GetID: integer;
+function TItem.GetID: string;
 begin
   result := self.id;
 end;
@@ -68,7 +68,7 @@ end;
 
 function TItem.ToString: string;
 begin
-  result := Format('[%s] Title: %s, Category: %s, Price: %m', [inttostr(id), title, category, price]);
+  result := Format('[%s] Title: %s, Category: %s, Price: %m', [id, title, category, price]);
 end;
 
 end.
