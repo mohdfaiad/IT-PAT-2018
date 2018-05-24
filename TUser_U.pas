@@ -9,7 +9,7 @@ type
 
   TUser = class(TObject)
     private
-      id: string;  // TODO: make IDs string
+      id: string;
       firstName: string;
       lastname: string;
       userType: TUserType;
