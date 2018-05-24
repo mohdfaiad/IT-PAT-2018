@@ -105,7 +105,7 @@ end;
 
 procedure Tdata_module.test;
 begin
-  Tdata_module.getEntityByID('Item', '1', qry);
+  Tdata_module.getEntityByID('Items', '1', qry);
   TLogger.log(TAG, debug, qry.Fields[1].asstring);
 end;
 

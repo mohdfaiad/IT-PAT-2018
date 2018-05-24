@@ -11,6 +11,7 @@ type
         TAG: string = 'UTILITIES';
     public
       // User
+      class function loginUser(userID, password: string; var user: TUser; hashed: boolean = false): boolean;
       class function newUser(var user: TUser; var password: string; firstname, lastname: string): boolean;
       class function changePassword(user: TUser; oldPassword, newPassword: string): boolean;
       class function updateUserInformation(user: TUser; var newUser: TUser): boolean;
@@ -68,6 +69,51 @@ begin
   finally
     hashMessageDigest5.Free;
   end;
+end;
+
+class function Utilities.loginUser(userID, password: string; var user: TUser;
+  hashed: boolean): boolean;
+var
+  qry: TADOQuery;
+  id, firstname, lastname: string;
+  userType: Integer;
+  registerDate: TDateTime;
+begin
+  {
+    1. Check if user exists
+    2. Retrieve user record
+    3. Create and return TUser object
+  }
+  if not hashed then
+    password := getMD5Hash(password);
+
+  qry := data_module.queryDatabase('SELECT * FROM Users WHERE ID = ' + userID
+      + ' AND password = ' + quotedStr(password), data_module.qry);
+
+  // 1. Check if user exists
+  if not qry.Eof then
+  begin
+    // 2. Retrieve user record
+    id := qry.FieldByName('ID').AsString;
+    userType := qry.FieldByName('Type').AsInteger;
+    firstname := qry.FieldByName('FirstName').AsString;
+    lastname := qry.FieldByName('LastName').AsString;
+    registerDate := qry.FieldByName('RegisterDate').AsDateTime;
+
+    // 3. Create and return TUser object
+    user := TUser.Create(id, firstname, lastname, TUserType(userType), registerDate);
+
+    TLogger.log(TAG, Debug,
+      'Successfully logged in user with ID: ' + id);
+
+    result := true;
+    Exit;
+  end
+  else
+    result := false;
+
+  TLogger.log(TAG, Error, 'Failed login attempt with ID: ' + ID);
+
 end;
 
 class function Utilities.newItem(var item: TItem; title, category: string;

@@ -1,7 +1,7 @@
-object Form2: TForm2
+object frmAuthenticate: TfrmAuthenticate
   Left = 0
   Top = 0
-  Caption = 'Form2'
+  Caption = 'PoSify - Stephan Cilliers'
   ClientHeight = 424
   ClientWidth = 681
   Color = clBtnFace
@@ -39,12 +39,14 @@ object Form2: TForm2
       Height = 21
       TabOrder = 0
       TextHint = 'User ID'
+      OnChange = edtIDChange
     end
     object edtPassword: TEdit
       Left = 16
       Top = 43
       Width = 161
       Height = 21
+      PasswordChar = '*'
       TabOrder = 1
       TextHint = 'Password'
     end
@@ -54,7 +56,9 @@ object Form2: TForm2
       Width = 161
       Height = 25
       Caption = 'Login'
+      Default = True
       TabOrder = 2
+      OnClick = btnLoginClick
     end
   end
 end
