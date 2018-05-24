@@ -1,3 +1,6 @@
 2018/05/24 10:10:58 AM (EMPLOYEE_HOME) - DEBUG: Session started
 2018/05/24 10:10:58 AM (DATA_MODULE) - DEBUG: Youth Burger
 2018/05/24 11:45:28 AM (DATA_MODULE) - ERROR: @modifyDatabase DELETE FROM Users WHERE ID = 1 Exception class name = EOleExceptionException message = The record cannot be deleted or changed because table 'Orders' includes related records
+2018/05/24 12:26:16 PM (DATA_MODULE) - ERROR: @modifyDatabase INSERT INTO Users (FirstName, LastName, Type, Password, RegisterDate) VALUES ("asdf", "asdf", 1, "password", #2018/05/24#) Exception class name = EOleExceptionException message = Syntax error in INSERT INTO statement
+2018/05/24 12:28:49 PM (DATA_MODULE) - ERROR: @modifyDatabase INSERT INTO Users (FirstName, LastName, Type, Password, RegisterDate) VALUES ('a', 'a', 1, 'password', #2018/05/24#) Exception class name = EOleExceptionException message = Syntax error in INSERT INTO statement
+2018/05/24 12:30:58 PM (DATA_MODULE) - ERROR: @modifyDatabase INSERT INTO Users (FirstName, LastName, [Type], Password, RegisterDate) VALUES ('a', 'a', 1, 'password', #2018/05/24#) Exception class name = EOleExceptionException message = Syntax error in INSERT INTO statement

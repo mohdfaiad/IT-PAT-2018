@@ -41,8 +41,10 @@ begin
   end else
   begin
     ShowMessage('Something went wrong.');
-    self.CloseModal;
   end;
+
+  self.CloseModal;
+  self.Close;
 
 end;
 

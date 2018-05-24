@@ -30,7 +30,7 @@ uses TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U;
 procedure TfrmEmployeeHome.FormCreate(Sender: TObject);
 begin
   inherited;
-  if sender = nil then
+  if sender = self then
     test
 end;
 

@@ -2,7 +2,7 @@ unit Utilities_U;
 
 interface
 
-uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHash, IdHashMessageDigest, SysUtils;
+uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHash, IdHashMessageDigest, SysUtils, Dialogs;
 
 type
   Utilities = class
@@ -162,13 +162,15 @@ class function Utilities.newUser(var user: TUser; password: string;
   firstname, lastname: string; userType: TUserType; registerDate: TDateTime): boolean;
 begin
   // password := getMD5Hash(password); // TODO:
-  result := data_module.modifyDatabase(Format('INSERT INTO Users (FirstName, LastName, Type, RegisterDate) VALUES ("%s", "%s", %s, #%s#)', [
-    firstName,
-    lastName,
+  result := data_module.modifyDatabase(Format('INSERT INTO Users (FirstName, LastName, [Type], [Password], RegisterDate) VALUES (%s, %s, %s, %s, #%s#)', [
+    quotedstr(firstName),
+    quotedStr(lastName),
     inttostr(ord(userType)),
+    quotedStr(password),
     datetostr(registerdate)
   ]), data_module.qry);
 
+  result := true;
 end;
 
 class function Utilities.removeUser(user: TUser): boolean;
