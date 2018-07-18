@@ -49,7 +49,7 @@ begin
   setLength(arrItems, 2);
   arrItems[0] := item;
   arrItems[1] := item;
-  order := TOrder.Create(1, user, 'Ordered', date(), arrItems);
+  order := TOrder.Create('1', user, 'Ordered', date(), arrItems);
 //  showmessage(order.ToString);
 
   TLogger.clear;

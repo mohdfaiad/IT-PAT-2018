@@ -7,17 +7,17 @@ uses SysUtils, TUser_U, TItem_U;
 type
   TOrder = class(TObject)
     private
-      id: integer;
+      id: string;
       employee: TUser;
       status: string;
       createDate: TDateTime;
       completeDate: TDateTime;
       items: TItemArray;
     public
-      constructor Create(id: integer; employee: TUser; status: string; createDate: TDateTime; items: TItemArray);
+      constructor Create(id: string; employee: TUser; status: string; createDate: TDateTime; items: TItemArray);
 
       // Accessors
-      function GetID: integer;
+      function GetID: string;
       function GetEmployee: TUser;
       function GetStatus: string;
       function GetCreateDate: TDateTime;
@@ -40,7 +40,7 @@ implementation
 
 { TOrder }
 
-constructor TOrder.Create(id: integer; employee: TUser; status: string;
+constructor TOrder.Create(id: string; employee: TUser; status: string;
   createDate: TDateTime; items: TItemArray);
 begin
   self.id := id;
@@ -65,7 +65,7 @@ begin
   result := self.employee;
 end;
 
-function TOrder.GetID: integer;
+function TOrder.GetID: string;
 begin
   result := self.id;
 end;
@@ -115,7 +115,7 @@ end;
 function TOrder.ToString: string;
 begin
 
-  result := Format('[%s] Employee: %s, Items: %s, Total: %m', [inttostr(id), employee.GetFullName, inttostr(length(items)), self.GetTotal]);
+  result := Format('[%s] Employee: %s, Items: %s, Total: %m', [id, employee.GetFullName, inttostr(length(items)), self.GetTotal]);
 end;
 
 end.

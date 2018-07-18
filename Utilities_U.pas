@@ -92,6 +92,11 @@ begin
   end;
 end;
 
+class function Utilities.getItems(var items: TItemArray): boolean;
+begin
+
+end;
+
 class function Utilities.getMD5Hash(s: string): string;
 var
   hashMessageDigest5: TIdHashMessageDigest5;
@@ -103,6 +108,11 @@ begin
   finally
     hashMessageDigest5.Free;
   end;
+end;
+
+class function Utilities.getOrders(var orders: TOrderArray): boolean;
+begin
+
 end;
 
 class function Utilities.loginUser(userID, password: string; var user: TUser;
@@ -156,10 +166,10 @@ begin
   result := data_module.modifyDatabase(Format('INSERT INTO Items (Title, Category, Price) VALUES (%s, %s, %s)', [
     quotedstr(title),
     quotedStr(category),
-    inttostr(price)
+    floattostr(price)
   ]), data_module.qry);
 
-  item := TItem.Create(getLastID(data_module.qry), title, category, price);
+  item := TItem.Create(inttostr(getLastID(data_module.qry)), title, category, price);
 
   if result then
   begin
@@ -185,7 +195,7 @@ begin
     FormatDateTime('c', now)
   ]), data_module.qry);
 
-  order := TOrder.Create(getLastID(data_module.qry), employee, status, FormatDateTime('c', now));
+  order := TOrder.Create(inttostr(getLastID(data_module.qry)), employee, status, now, items);
 
   for item in items do
   begin
@@ -260,7 +270,7 @@ begin
   result := data_module.modifyDatabase(Format('UPDATE Users SET FirstName = %s, LastName = %s, [Type] = %s WHERE [ID] = %s', [
     quotedStr(newUser.GetFirstName),
     quotedStr(newUser.GetLastName),
-    newUser.GetType,
+    inttostr(integer(newUser.GetType)),
     newUser.GetID
   ]), data_module.qry);
 
