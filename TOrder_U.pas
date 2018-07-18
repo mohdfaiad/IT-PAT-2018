@@ -34,6 +34,8 @@ type
       function ToString: string;
   end;
 
+  TOrderArray = array of TOrder;
+
 implementation
 
 { TOrder }

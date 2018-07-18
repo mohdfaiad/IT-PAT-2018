@@ -21,12 +21,16 @@ type
 
       // Item
       class function newItem(var item: TItem; title, category: string; price: double): boolean;
+      class function getItems(var items: TItemArray): boolean;
 
       // Order
       class function newOrder(var order: TOrder; employee: TUser; status: string; createDate: TDateTime; items: TItemArray): boolean;
+      class function updateOrder(var order: TOrder; newStatus: String): boolean;
+      class function getOrders(var orders: TOrderArray): boolean;
 
       // Misc
       class function getMD5Hash(s: string): string;
+      class function getLastID(var query: TADOQuery { or TQuery } ): Integer;
   end;
 
 implementation
@@ -149,13 +153,57 @@ end;
 class function Utilities.newItem(var item: TItem; title, category: string;
   price: double): boolean;
 begin
+  result := data_module.modifyDatabase(Format('INSERT INTO Items (Title, Category, Price) VALUES (%s, %s, %s)', [
+    quotedstr(title),
+    quotedStr(category),
+    inttostr(price)
+  ]), data_module.qry);
 
+  item := TItem.Create(getLastID(data_module.qry), title, category, price);
+
+  if result then
+  begin
+    TLogger.log(TAG, Debug, 'Successfully added new item with ID: ' + item.GetID);
+  end else
+  begin
+    TLogger.log(TAG, Debug, 'Failed to add item with name: ' + item.GetTitle);
+  end;
 end;
 
 class function Utilities.newOrder(var order: TOrder; employee: TUser;
   status: string; createDate: TDateTime; items: TItemArray): boolean;
+var
+  now: TDateTime;
+  item: TItem;
+  note: string;
 begin
+  now := Date;
 
+  result := data_module.modifyDatabase(Format('INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (%s, %s, #%s#)', [
+    employee.GetID,
+    quotedStr(status),
+    FormatDateTime('c', now)
+  ]), data_module.qry);
+
+  order := TOrder.Create(getLastID(data_module.qry), employee, status, FormatDateTime('c', now));
+
+  for item in items do
+  begin
+    note := item.GetNote; // TODO: Check if null - return empty string
+    result := result and data_module.modifyDatabase(Format('INSERT INTO Order_Item (OrderID, ItemID, Note) VALUES (%s, %s, %s)', [
+    order.GetID,
+    item.GetID,
+    quotedStr(note)
+  ]), data_module.qry);
+  end;
+
+  if result then
+  begin
+    TLogger.log(TAG, Debug, 'Successfully created order with ID: ' + order.GetID);
+  end else
+  begin
+    TLogger.log(TAG, Debug, 'Failed to create order with ID: ' + order.GetID);
+  end;
 end;
 
 class function Utilities.newUser(var user: TUser; password: string;
@@ -170,18 +218,75 @@ begin
     datetostr(registerdate)
   ]), data_module.qry);
 
-  result := true;
+  result := true; // TODO: Remove
 end;
 
 class function Utilities.removeUser(user: TUser): boolean;
 begin
   result := data_module.modifyDatabase(Format('DELETE FROM Users WHERE ID = %s', [user.GetID]), data_module.qry);
+
+  if result then
+  begin
+    TLogger.log(TAG, Debug, 'Successfully removed user with ID: ' + user.GetID);
+  end else
+  begin
+    TLogger.log(TAG, Debug, 'Failed to remove user with ID: ' + user.GetID);
+  end;
+end;
+
+class function Utilities.updateOrder(var order: TOrder; newStatus: String): boolean;
+begin
+  result := data_module.modifyDatabase(Format('UPDATE Orders SET Status = %s WHERE ID = %s', [
+    quotedStr(newStatus),
+    order.GetID
+  ]), data_module.qry);
+  if result then
+    order.SetStatus(newstatus);  // TODO: Does this belong here?
+
+  if result then
+  begin
+    TLogger.log(TAG, Debug, 'Successfully changed information of order with ID: ' + order.GetID);
+  end else
+  begin
+    TLogger.log(TAG, Debug, 'Failed to change information of order with ID: ' + order.GetID);
+  end;
 end;
 
 class function Utilities.updateUserInformation(user: TUser;
   var newUser: TUser): boolean;
 begin
+  newUser := TUser.Create(user.GetID, user.GetFirstName, user.GetLastName, user.GetType, user.GetDateRegistered);
+  // Update information
+  result := data_module.modifyDatabase(Format('UPDATE Users SET FirstName = %s, LastName = %s, [Type] = %s WHERE [ID] = %s', [
+    quotedStr(newUser.GetFirstName),
+    quotedStr(newUser.GetLastName),
+    newUser.GetType,
+    newUser.GetID
+  ]), data_module.qry);
 
+  if result then
+  begin
+    TLogger.log(TAG, Debug, 'Successfully changed information of user with ID: ' + user.getID);
+  end else
+  begin
+    TLogger.log(TAG, Debug, 'Failed to change information of user with ID: ' + user.getID);
+  end;
+end;
+
+// http://www.swissdelphicenter.com/en/showcode.php?id=1749
+class function Utilities.getLastID(var query: TADOQuery): Integer;
+begin
+  result := -1;
+  try
+    query.sql.clear;
+    query.sql.Add('SELECT @@IDENTITY');
+    query.Active := true;
+    query.First;
+    result := query.Fields.Fields[0].AsInteger;
+  finally
+    query.Active := false;
+    query.sql.clear;
+  end;
 end;
 
 end.
