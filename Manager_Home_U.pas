@@ -97,12 +97,30 @@ end;
 procedure TfrmManagerHome.test;
 var
   user: TUser;
-
+  items: TItemArray;
+  item: TItem;
+  order: TOrder;
 begin
   user := TUser.Create('2', 'Stephan', 'Cilliers', employee, now());
   self.setUser(user);
 
   refreshEmployees;
+//  if Utilities.getItems(items) then
+//  begin
+//    showmessage(inttostr(length(items)));
+//  end;
+//
+//  if Utilities.newOrder(order, self.getUser, 'Preparing', Date, items) then
+//  begin
+//    showmessage(order.ToString);
+//  end;
+//
+//  if Utilities.updateOrder(order, 'Fetch') then
+//  begin
+//    showmessage(order.ToString);
+//  end;
+
+
 end;
 
 end.

@@ -16,7 +16,7 @@ type
       class function changePassword(user: TUser; oldPassword, newPassword: string): boolean;
       class function updateUserInformation(user: TUser; var newUser: TUser): boolean;
 
-      class function getEmployees(var arrEmployees: TUserArray): boolean;
+      class function getEmployees(var employees: TUserArray): boolean;
       class function removeUser(user: TUser): boolean;
 
       // Item
@@ -65,7 +65,7 @@ begin
   end;
 end;
 
-class function Utilities.getEmployees(var arrEmployees: TUserArray): boolean;
+class function Utilities.getEmployees(var employees: TUserArray): boolean;
 var
   qry: TADOQuery;
   user: TUser;
@@ -75,7 +75,7 @@ begin
 
     while not qry.Eof do
     begin
-      setLength(arrEmployees, length(arrEmployees)+1);
+      setLength(employees, length(employees)+1);
       user := TUser.Create(
         qry.FieldByName('ID').AsString,
         qry.FieldByName('FirstName').AsString,
@@ -83,7 +83,7 @@ begin
         TUserType(qry.FieldByName('Type').AsInteger),
         qry.FieldByName('RegisterDate').AsDateTime
       );
-      arrEmployees[length(arrEmployees)-1] := user;
+      employees[length(employees)-1] := user;
       qry.Next;
     end;
     result := true;
@@ -93,7 +93,29 @@ begin
 end;
 
 class function Utilities.getItems(var items: TItemArray): boolean;
+var
+  qry: TADOQuery;
+  item: TItem;
 begin
+  try
+    qry := data_module.queryDatabase('SELECT * FROM Items', data_module.qry);
+
+    while not qry.Eof do
+    begin
+      setLength(items, length(items)+1);
+      item := TItem.Create(
+        qry.FieldByName('ID').AsString,
+        qry.FieldByName('Title').AsString,
+        qry.FieldByName('Category').AsString,
+        qry.FieldByName('Price').AsFloat
+      );
+      items[length(items)-1] := item;
+      qry.Next;
+    end;
+    result := true;
+  except
+    result := false;
+  end;
 
 end;
 
@@ -183,28 +205,26 @@ end;
 class function Utilities.newOrder(var order: TOrder; employee: TUser;
   status: string; createDate: TDateTime; items: TItemArray): boolean;
 var
-  now: TDateTime;
   item: TItem;
   note: string;
 begin
-  now := Date;
-
   result := data_module.modifyDatabase(Format('INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (%s, %s, #%s#)', [
     employee.GetID,
     quotedStr(status),
-    FormatDateTime('c', now)
+    FormatDateTime('c', createDate)
   ]), data_module.qry);
 
-  order := TOrder.Create(inttostr(getLastID(data_module.qry)), employee, status, now, items);
+  order := TOrder.Create(inttostr(getLastID(data_module.qry)), employee, status, createDate, items);
 
   for item in items do
   begin
     note := item.GetNote; // TODO: Check if null - return empty string
-    result := result and data_module.modifyDatabase(Format('INSERT INTO Order_Item (OrderID, ItemID, Note) VALUES (%s, %s, %s)', [
+    result := result and data_module.modifyDatabase(Format('INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (%s, %s, %s)', [
     order.GetID,
     item.GetID,
     quotedStr(note)
   ]), data_module.qry);
+    showmessage(booltostr(result));
   end;
 
   if result then
