@@ -22,11 +22,12 @@ type
       // Item
       class function newItem(var item: TItem; title, category: string; price: double): boolean;
       class function getItems(var items: TItemArray): boolean;
+      class function getOrderItems(var items: TItemArray; orderID: string): boolean;
 
       // Order
       class function newOrder(var order: TOrder; employee: TUser; status: string; createDate: TDateTime; items: TItemArray): boolean;
       class function updateOrder(var order: TOrder; newStatus: String): boolean;
-      class function getOrders(var orders: TOrderArray): boolean;
+      class function getOrders(var orders: TOrderArray; employee: TUser): boolean;
 
       // Misc
       class function getMD5Hash(s: string): string;
@@ -132,9 +133,67 @@ begin
   end;
 end;
 
-class function Utilities.getOrders(var orders: TOrderArray): boolean;
+class function Utilities.getOrderItems(var items: TItemArray;
+  orderID: string): boolean;
+var
+  qry: TADOQuery;
+  item: TItem;
 begin
+  // TODO: Test
+  try
+    qry := data_module.queryDatabase(
+      'SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items ' +
+      'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID ' +
+      'WHERE Order_Item.OrderID = ' + orderID,
+    data_module.qry);
 
+    while not qry.Eof do
+    begin
+      setLength(items, length(items)+1);
+      item := TItem.Create(
+        qry.FieldByName('ID').AsString,
+        qry.FieldByName('Title').AsString,
+        qry.FieldByName('Category').AsString,
+        qry.FieldByName('Price').AsFloat
+      );
+      item.SetNote(qry.FieldByName('Note').AsString);
+      items[length(items)-1] := item;
+      qry.Next;
+    end;
+    result := true;
+  except
+    result := false;
+  end;
+
+end;
+
+class function Utilities.getOrders(var orders: TOrderArray; employee: TUser): boolean;
+var
+  qry: TADOQuery;
+  order: TOrder;
+  id: string;
+begin
+  try
+    qry := data_module.queryDatabase(Format('SELECT * FROM Orders WHERE EmployeeID = %s', [employee.GetID]), data_module.qry);
+
+    while not qry.Eof do
+    begin
+      setLength(orders, length(orders)+1);
+      id := qry.FieldByName('ID').AsString;
+
+      TItem.Create(
+        qry.FieldByName('ID').AsString,
+        qry.FieldByName('Title').AsString,
+        qry.FieldByName('Category').AsString,
+        qry.FieldByName('Price').AsFloat
+      );
+      orders[length(order)-1] := order;
+      qry.Next;
+    end;
+    result := true;
+  except
+    result := false;
+  end;
 end;
 
 class function Utilities.loginUser(userID, password: string; var user: TUser;
