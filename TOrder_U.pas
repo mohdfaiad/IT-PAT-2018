@@ -114,7 +114,6 @@ end;
 
 function TOrder.ToString: string;
 begin
-
   result := Format('[%s] Employee: %s, Items: %s, Total: %m', [id, employee.GetFullName, inttostr(length(items)), self.GetTotal]);
 end;
 

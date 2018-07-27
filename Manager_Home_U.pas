@@ -100,11 +100,22 @@ var
   items: TItemArray;
   item: TItem;
   order: TOrder;
+  orders: TOrderArray;
 begin
   user := TUser.Create('2', 'Stephan', 'Cilliers', employee, now());
   self.setUser(user);
 
   refreshEmployees;
+
+  utilities.getOrders(orders, user);
+
+  showmessage(inttostr(length(orders)));
+  
+  for order in orders do
+  begin
+    showmessage(order.ToString);
+  end;
+
 //  if Utilities.getItems(items) then
 //  begin
 //    showmessage(inttostr(length(items)));

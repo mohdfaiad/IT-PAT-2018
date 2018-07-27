@@ -139,7 +139,6 @@ var
   qry: TADOQuery;
   item: TItem;
 begin
-  // TODO: Test
   try
     qry := data_module.queryDatabase(
       'SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items ' +
@@ -171,7 +170,8 @@ class function Utilities.getOrders(var orders: TOrderArray; employee: TUser): bo
 var
   qry: TADOQuery;
   order: TOrder;
-  id: string;
+  items: TItemArray;
+  id, status: string;
 begin
   try
     qry := data_module.queryDatabase(Format('SELECT * FROM Orders WHERE EmployeeID = %s', [employee.GetID]), data_module.qry);
@@ -180,19 +180,32 @@ begin
     begin
       setLength(orders, length(orders)+1);
       id := qry.FieldByName('ID').AsString;
+      status := qry.FieldByName('Status').AsString;
 
-      TItem.Create(
-        qry.FieldByName('ID').AsString,
-        qry.FieldByName('Title').AsString,
-        qry.FieldByName('Category').AsString,
-        qry.FieldByName('Price').AsFloat
+      items := nil;
+      finalize(items);
+      setLength(items, 0);
+      getOrderItems(items, id);
+
+      order := TOrder.Create(
+         id,
+         employee,
+         status,
+         date,
+         items
       );
-      orders[length(order)-1] := order;
+
+      orders[length(orders)-1] := order;
       qry.Next;
     end;
     result := true;
   except
-    result := false;
+    on E: Exception do
+    begin
+      TLogger.logException(TAG, 'getOrders', e);
+      result := false;
+      Exit;
+    end;
   end;
 end;
 
