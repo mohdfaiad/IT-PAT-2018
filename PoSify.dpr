@@ -12,15 +12,15 @@ uses
   Utilities_U in 'Utilities_U.pas',
   Authenticate_U in 'Authenticate_U.pas' {frmAuthenticate},
   Manager_Home_U in 'Manager_Home_U.pas' {frmManagerHome},
-  New_User_U in 'New_User_U.pas' {frmNewUser};
+  New_User_U in 'New_User_U.pas' {frmNewUser},
+  Login_U in 'Login_U.pas' {frmLogin};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := False;
+  Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(Tdata_module, data_module);
-  Application.CreateForm(TfrmManagerHome, frmManagerHome);
-  Application.CreateForm(TfrmNewUser, frmNewUser);
   Application.Run;
 end.

@@ -67,6 +67,9 @@
 			<DCCReference Include="New_User_U.pas">
 				<Form>frmNewUser</Form>
 			</DCCReference>
+			<DCCReference Include="Login_U.pas">
+				<Form>frmLogin</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
