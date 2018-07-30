@@ -10,11 +10,6 @@ inherited frmManagerHome: TfrmManagerHome
     Height = 13
     Caption = 'Employees'
   end
-  inherited pnlHeader: TPanel
-    inherited btnViewAccount: TButton
-      ExplicitLeft = 609
-    end
-  end
   object lstEmployees: TListBox
     Left = 24
     Top = 96
@@ -42,5 +37,28 @@ inherited frmManagerHome: TfrmManagerHome
     Enabled = False
     TabOrder = 3
     OnClick = btnRemoveEmployeeClick
+  end
+  object pnlDetails: TPanel
+    Left = 232
+    Top = 96
+    Width = 201
+    Height = 257
+    Caption = 'pnlDetails'
+    TabOrder = 4
+    Visible = False
+    object redDetails: TRichEdit
+      Left = 8
+      Top = 8
+      Width = 185
+      Height = 241
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
   end
 end

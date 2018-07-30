@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, Grids, DBGrids;
+  Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, Grids, DBGrids, ComCtrls, TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U, Utilities_U,
+  New_User_U;
 
 type
   TfrmManagerHome = class(TfrmTemplate)
@@ -12,6 +13,8 @@ type
     btnNewEmployee: TButton;
     btnRemoveEmployee: TButton;
     Label1: TLabel;
+    pnlDetails: TPanel;
+    redDetails: TRichEdit;
     procedure FormCreate(Sender: TObject);
     procedure lstEmployeesClick(Sender: TObject);
     procedure btnRemoveEmployeeClick(Sender: TObject);
@@ -19,6 +22,7 @@ type
   private
     { Private declarations }
     procedure refreshEmployees;
+    procedure showDetails(employee: TUser);
     procedure test;
   public
     { Public declarations }
@@ -28,9 +32,6 @@ var
   frmManagerHome: TfrmManagerHome;
 
 implementation
-
-uses TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U, Utilities_U,
-  New_User_U;
 
 {$R *.dfm}
 
@@ -70,13 +71,17 @@ begin
   if sender = self then
     test;
 
-
 end;
 
 procedure TfrmManagerHome.lstEmployeesClick(Sender: TObject);
 begin
   inherited;
   btnRemoveEmployee.Enabled := true;
+
+  if lstEmployees.ItemIndex > -1 then
+  begin
+    showDetails(arrEmployees[lstEmployees.ItemIndex]);
+  end;
 end;
 
 procedure TfrmManagerHome.refreshEmployees;
@@ -94,6 +99,16 @@ begin
   end;
 end;
 
+procedure TfrmManagerHome.showDetails(employee: TUser);
+begin
+  // TODO: Show stats
+  pnlDetails.visible := true;
+  redDetails.Clear;
+  redDetails.Lines.Add(employee.GetFullName);
+  redDetails.Lines.Add('');
+  redDetails.Lines.Add('Register date ' + datetostr(employee.GetDateRegistered) + ' (' + inttostr(employee.GetDaysRegistered) + ')');
+end;
+
 procedure TfrmManagerHome.test;
 var
   user: TUser;
@@ -108,13 +123,6 @@ begin
   refreshEmployees;
 
   utilities.getOrders(orders, user);
-
-  showmessage(inttostr(length(orders)));
-  
-  for order in orders do
-  begin
-    showmessage(order.ToString);
-  end;
 
 //  if Utilities.getItems(items) then
 //  begin
