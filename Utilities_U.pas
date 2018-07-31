@@ -316,7 +316,7 @@ begin
     quotedstr(firstName),
     quotedStr(lastName),
     inttostr(ord(userType)),
-    quotedStr(password),
+    quotedStr(getmd5hash(password)),
     datetostr(registerdate)
   ]), data_module.qry);
 

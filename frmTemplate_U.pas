@@ -11,6 +11,7 @@ type
     pnlHeader: TPanel;
     btnLogout: TButton;
     btnViewAccount: TButton;
+    procedure btnViewAccountClick(Sender: TObject);
   private
     currentUser: TUser;
   public
@@ -23,9 +24,19 @@ var
 
 implementation
 
+uses Edit_User_Profile_U;
+
 {$R *.dfm}
 
 { TfrmTemplate }
+
+procedure TfrmTemplate.btnViewAccountClick(Sender: TObject);
+var
+  form: TfrmEditUserProfile;
+begin
+  form := TfrmEditUserProfile.create(self, self.getUser);
+  form.showmodal;
+end;
 
 function TfrmTemplate.getUser: TUser;
 begin

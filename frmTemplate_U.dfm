@@ -31,7 +31,6 @@ object frmTemplate: TfrmTemplate
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 619
     DesignSize = (
       692
       41)
@@ -51,7 +50,7 @@ object frmTemplate: TfrmTemplate
       Anchors = [akTop, akRight]
       Caption = 'View Account'
       TabOrder = 1
-      ExplicitLeft = 536
+      OnClick = btnViewAccountClick
     end
   end
 end

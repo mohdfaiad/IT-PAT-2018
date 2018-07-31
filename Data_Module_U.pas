@@ -57,6 +57,9 @@ begin
     qry.sql.clear;
     qry.sql.Add(sql);
     qry.ExecSQL;
+
+    TLogger.log(TAG, debug, 'Query: ' + sql);
+
     result := true;
   except
     on E: Exception do
@@ -78,7 +81,7 @@ begin
     qry.sql.Add(query);
     qry.Open;
 
-//    TLogger.log(TAG, debug, 'Query: ' + query);
+    TLogger.log(TAG, debug, 'Query: ' + query);
     result := qry;
   except
     on E: Exception do
