@@ -26,19 +26,28 @@ var
 
 implementation
 
-uses Utilities_U, Manager_Home_U, Employee_Home_U;
+uses Utilities_U, Manager_Home_U, Employee_Home_U, frmTemplate_U;
 
 {$R *.dfm}
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
 var
-  frmManager: TfrmManagerHome;
-  frmEmployee: TfrmEmployeeHome;
+  form: TfrmTemplate;
 begin
+  // TODO: Remember me functionality
   // TODO: Validate input
   if Utilities.loginUser(edtUserID.Text, edtPassword.Text, user, true) then
   begin
-    // TODO: Launch appropriate form
+    if user.GetType = employee then
+    begin
+      form := TfrmEmployeeHome.Create(nil);
+    end else
+    begin
+      form := TfrmManagerHome.Create(nil);
+    end;
+    form.setUser(user);
+    form.Show;
+    self.Hide;
   end else
   begin
     edtPassword.SetFocus;
