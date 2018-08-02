@@ -30,8 +30,8 @@ uses TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U;
 procedure TfrmEmployeeHome.FormCreate(Sender: TObject);
 begin
   inherited;
-  if sender = self then
-    test
+//  if sender = self then
+//    test
 end;
 
 procedure TfrmEmployeeHome.test;
@@ -55,7 +55,7 @@ begin
   TLogger.clear;
   TLogger.log(TAG, debug, 'Session started');
 
-  data_module.test;
+//  data_module.test;
 end;
 
 end.

@@ -7,6 +7,9 @@ uses
   Dialogs, StdCtrls;
 
 type
+  INewUserDelegate = Interface(IInterface)
+    procedure didCreateNewUser;
+  End;
   TfrmNewUser = class(TForm)
     edtFirstName: TEdit;
     edtLastName: TEdit;
@@ -16,8 +19,10 @@ type
     procedure btnCreateClick(Sender: TObject);
   private
     { Private declarations }
+    sender: INewUserDelegate;
   public
     { Public declarations }
+    constructor Create(AOwner: TComponent); reintroduce; overload;
   end;
 
 var
@@ -38,6 +43,7 @@ begin
   if Utilities.newUser(user, 'password', edtFirstName.Text, edtLastName.Text, TUserType(cmbUserType.ItemIndex+1), Date()) then
   begin
     ShowMessage('User created. Use default password: "password" to log in.');
+    self.sender.didCreateNewUser;
   end else
   begin
     ShowMessage('Something went wrong.');
@@ -46,6 +52,14 @@ begin
   self.CloseModal;
   self.Close;
 
+end;
+
+
+constructor TfrmNewUser.Create(AOwner: TComponent);
+begin
+  inherited;
+  showmessage('new user');
+  self.sender := sender as INewUserDelegate;
 end;
 
 end.

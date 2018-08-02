@@ -8,7 +8,7 @@ uses
   New_User_U;
 
 type
-  TfrmManagerHome = class(TfrmTemplate)
+  TfrmManagerHome = class(TfrmTemplate, INewUserDelegate)
     lstEmployees: TListBox;
     btnNewEmployee: TButton;
     btnRemoveEmployee: TButton;
@@ -26,6 +26,7 @@ type
     procedure test;
   public
     { Public declarations }
+    procedure didCreateNewUser;
   end;
 
 var
@@ -65,11 +66,17 @@ begin
 
 end;
 
+procedure TfrmManagerHome.didCreateNewUser;
+begin
+  self.refreshEmployees;
+end;
+
 procedure TfrmManagerHome.FormCreate(Sender: TObject);
 begin
   inherited;
-  if sender = self then
-    test;
+  refreshEmployees;
+//  if sender = self then
+//    test;
 
 end;
 
@@ -117,6 +124,7 @@ var
   order: TOrder;
   orders: TOrderArray;
 begin
+  showmessage('h');
   user := TUser.Create('2', 'Stephan', 'Cilliers', employee, now());
   self.setUser(user);
 
