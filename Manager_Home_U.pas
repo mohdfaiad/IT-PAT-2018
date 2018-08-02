@@ -68,6 +68,7 @@ end;
 
 procedure TfrmManagerHome.didCreateNewUser;
 begin
+  showmessage('refresh');
   self.refreshEmployees;
 end;
 
