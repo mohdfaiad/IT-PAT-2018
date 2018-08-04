@@ -21,8 +21,8 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := False;
-  Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(Tdata_module, data_module);
-  Application.CreateForm(TfrmEditUserProfile, frmEditUserProfile);
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.ShowMainForm := false;
   Application.Run;
 end.

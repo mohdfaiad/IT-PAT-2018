@@ -44,7 +44,7 @@ var
   frmNewUser: TfrmNewUser;
 begin
   inherited;
-  frmNewUser := TFrmNewUser.Create(self);
+  frmNewUser := TFrmNewUser.Create(self, self);
   frmNewUser.ShowModal;
   refreshEmployees;
 end;

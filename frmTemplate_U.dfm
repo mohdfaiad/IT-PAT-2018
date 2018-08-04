@@ -41,6 +41,7 @@ object frmTemplate: TfrmTemplate
       Height = 25
       Caption = 'Logout'
       TabOrder = 0
+      OnClick = btnLogoutClick
     end
     object btnViewAccount: TButton
       Left = 609

@@ -11,6 +11,7 @@ object frmLogin: TfrmLogin
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object picLogo: TImage
@@ -317,7 +318,7 @@ object frmLogin: TfrmLogin
   object lblWelcome: TLabel
     Left = 240
     Top = 200
-    Width = 129
+    Width = 109
     Height = 13
     Alignment = taCenter
     Caption = 'Welcome, please log in'
@@ -342,12 +343,20 @@ object frmLogin: TfrmLogin
   end
   object btnLogin: TButton
     Left = 240
-    Top = 294
+    Top = 318
     Width = 129
     Height = 25
     Caption = 'Log in'
     Default = True
     TabOrder = 2
     OnClick = btnLoginClick
+  end
+  object chkRememberMe: TCheckBox
+    Left = 240
+    Top = 286
+    Width = 129
+    Height = 17
+    Caption = 'Remember me'
+    TabOrder = 3
   end
 end

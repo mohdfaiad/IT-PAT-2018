@@ -22,7 +22,7 @@ type
     sender: INewUserDelegate;
   public
     { Public declarations }
-    constructor Create(AOwner: TComponent); reintroduce; overload;
+    constructor create(aowner: TComponent; sender: INewUserDelegate); reintroduce; overload;
   end;
 
 var
@@ -55,11 +55,11 @@ begin
 end;
 
 
-constructor TfrmNewUser.Create(AOwner: TComponent);
+constructor TfrmNewUser.create(aowner: TComponent; sender: INewUserDelegate);
 begin
-  inherited;
+  inherited Create(aowner);
   showmessage('new user');
-  self.sender := sender as INewUserDelegate;
+  self.sender := sender;
 end;
 
 end.

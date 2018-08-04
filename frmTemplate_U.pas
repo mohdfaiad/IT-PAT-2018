@@ -12,6 +12,7 @@ type
     btnLogout: TButton;
     btnViewAccount: TButton;
     procedure btnViewAccountClick(Sender: TObject);
+    procedure btnLogoutClick(Sender: TObject);
   private
     currentUser: TUser;
   public
@@ -24,11 +25,21 @@ var
 
 implementation
 
-uses Edit_User_Profile_U;
+uses Edit_User_Profile_U, Utilities_U, Logger_U, Login_U;
 
 {$R *.dfm}
 
 { TfrmTemplate }
+
+procedure TfrmTemplate.btnLogoutClick(Sender: TObject);
+begin
+  self.Hide;
+  frmLogin.Show;
+  frmLogin.cached := false;
+  self.currentUser.Free;
+  Utilities.depersistLogin;
+//  TLogger.log(TAG, TLogType.Debug, 'Logged out user');
+end;
 
 procedure TfrmTemplate.btnViewAccountClick(Sender: TObject);
 var

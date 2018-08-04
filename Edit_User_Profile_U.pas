@@ -50,9 +50,9 @@ uses Utilities_U, frmTemplate_U;
 procedure TfrmEditUserProfile.btnChangePasswordClick(Sender: TObject);
 begin
   // TODO: Validation
-  // TODO: Fix this (fully implement hashing)
   if Utilities.changePassword(userOld, edtOldPassword.Text, edtNewPassword.Text) then
   begin
+    Utilities.depersistLogin;
     showmessage('Password changed successfully');
   end else
   begin

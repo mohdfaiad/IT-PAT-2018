@@ -59,6 +59,7 @@ inherited frmManagerHome: TfrmManagerHome
       ParentFont = False
       ReadOnly = True
       TabOrder = 0
+      Zoom = 100
     end
   end
 end

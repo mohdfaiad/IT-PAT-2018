@@ -10,6 +10,14 @@ type
       const
         TAG: string = 'UTILITIES';
     public
+      const
+        LOGIN_CACHE_FILE: string = '.login';
+
+      // Authentication
+      class procedure persistLogin(email, password: string; hashed: boolean);
+      class procedure depersistLogin;
+      class function getPersistedLogin(var email, password: string): boolean;
+
       // User
       class function loginUser(userID, password: string; var user: TUser; hashed: boolean = false): boolean;
       class function newUser(var user: TUser; password: string; firstname, lastname: string; userType: TUserType; registerDate: TDateTime): boolean;
@@ -64,6 +72,11 @@ begin
   begin
     TLogger.log(TAG, Debug, 'Failed to change password of user with ID: ' + user.getID);
   end;
+end;
+
+class procedure Utilities.depersistLogin;
+begin
+  DeleteFile(LOGIN_CACHE_FILE);
 end;
 
 class function Utilities.getEmployees(var employees: TUserArray): boolean;
@@ -209,6 +222,30 @@ begin
   end;
 end;
 
+class function Utilities.getPersistedLogin(var email,
+  password: string): boolean;
+var
+  f: TextFile;
+begin
+  AssignFile(f, LOGIN_CACHE_FILE);
+  try
+    Reset(f);
+    readln(f, email);
+    readln(f, password);
+    Closefile(f);
+  except
+    on E: Exception do
+    begin
+      Showmessage('Something went wrong... Check logs for more information.');
+      TLogger.logException(TAG, 'getPersistedLogin', e);
+      result := false;
+      Exit;
+    end;
+  end;
+
+  result := true;
+end;
+
 class function Utilities.loginUser(userID, password: string; var user: TUser;
   hashed: boolean): boolean;
 var
@@ -250,7 +287,7 @@ begin
   else
     result := false;
 
-  TLogger.log(TAG, Error, 'Failed login attempt with ID: ' + ID);
+  TLogger.log(TAG, Error, 'Failed login attempt with ID: ' + userID);
 
 end;
 
@@ -321,6 +358,32 @@ begin
   ]), data_module.qry);
 
   result := true; // TODO: Remove
+end;
+
+class procedure Utilities.persistLogin(email, password: string; hashed: boolean);
+var
+  f: TextFile;
+begin
+  TLogger.log(TAG, Debug, 'Persisting login for user with email: ' + email);
+
+  //
+  if not hashed then
+    password := getMD5Hash(password);
+
+  AssignFile(f, LOGIN_CACHE_FILE);
+  try
+    Rewrite(f);
+    writeLn(f, email);
+    writeLn(f, password);
+    CloseFile(f);
+  except
+    on E: Exception do
+    begin
+      Showmessage('Something went wrong... Check logs for more information.');
+      TLogger.logException(TAG, 'persistLogin', e);
+      Exit;
+    end;
+  end;
 end;
 
 class function Utilities.removeUser(user: TUser): boolean;
