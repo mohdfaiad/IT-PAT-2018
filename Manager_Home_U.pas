@@ -15,10 +15,12 @@ type
     Label1: TLabel;
     pnlDetails: TPanel;
     redDetails: TRichEdit;
+    btnManageMenu: TButton;
     procedure FormCreate(Sender: TObject);
     procedure lstEmployeesClick(Sender: TObject);
     procedure btnRemoveEmployeeClick(Sender: TObject);
     procedure btnNewEmployeeClick(Sender: TObject);
+    procedure btnManageMenuClick(Sender: TObject);
   private
     { Private declarations }
     procedure refreshEmployees;
@@ -36,8 +38,19 @@ implementation
 
 {$R *.dfm}
 
+uses Menu_Management_U;
+
 var
   arrEmployees: TUserArray;
+
+procedure TfrmManagerHome.btnManageMenuClick(Sender: TObject);
+var
+  frmManageMenu: TfrmManageMenu;
+begin
+  inherited;
+  frmManageMenu := TfrmManageMenu.Create(self);
+  frmManageMenu.ShowModal;
+end;
 
 procedure TfrmManagerHome.btnNewEmployeeClick(Sender: TObject);
 var

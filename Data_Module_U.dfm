@@ -5,8 +5,8 @@ object data_module: Tdata_module
   object connection: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;Persis' +
-      't Security Info=False;'
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Stephan\Do' +
+      'cuments\IT-PAT-2018\Database.mdb;Persist Security Info=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -19,10 +19,15 @@ object data_module: Tdata_module
     Left = 136
     Top = 96
   end
-  object tblUsers: TADOTable
+  object tblItems: TADOTable
     Connection = connection
-    TableName = 'Users'
+    TableName = 'Items'
     Left = 208
     Top = 128
+  end
+  object srcItems: TDataSource
+    DataSet = tblItems
+    Left = 200
+    Top = 72
   end
 end

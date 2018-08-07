@@ -38,7 +38,7 @@ var
   form: TfrmTemplate;
 begin
   // TODO: Validate input
-
+//
   if Utilities.loginUser(edtUserID.Text, edtPassword.Text, user, cached) then
   begin
     if chkRememberMe.Checked or cached then

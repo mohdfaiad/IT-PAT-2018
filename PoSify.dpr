@@ -14,7 +14,8 @@ uses
   Manager_Home_U in 'Manager_Home_U.pas' {frmManagerHome},
   New_User_U in 'New_User_U.pas' {frmNewUser},
   Login_U in 'Login_U.pas' {frmLogin},
-  Edit_User_Profile_U in 'Edit_User_Profile_U.pas' {frmEditUserProfile};
+  Edit_User_Profile_U in 'Edit_User_Profile_U.pas' {frmEditUserProfile},
+  Menu_Management_U in 'Menu_Management_U.pas' {frmManageMenu};
 
 {$R *.res}
 

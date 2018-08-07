@@ -1,6 +1,8 @@
 inherited frmManagerHome: TfrmManagerHome
   Caption = 'Manager Home'
   OnCreate = FormCreate
+  ExplicitWidth = 724
+  ExplicitHeight = 449
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
@@ -39,18 +41,18 @@ inherited frmManagerHome: TfrmManagerHome
     OnClick = btnRemoveEmployeeClick
   end
   object pnlDetails: TPanel
-    Left = 232
+    Left = 424
     Top = 96
-    Width = 201
-    Height = 257
+    Width = 249
+    Height = 121
     Caption = 'pnlDetails'
     TabOrder = 4
     Visible = False
     object redDetails: TRichEdit
       Left = 8
       Top = 8
-      Width = 185
-      Height = 241
+      Width = 233
+      Height = 105
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -61,5 +63,14 @@ inherited frmManagerHome: TfrmManagerHome
       TabOrder = 0
       Zoom = 100
     end
+  end
+  object btnManageMenu: TButton
+    Left = 576
+    Top = 359
+    Width = 97
+    Height = 25
+    Caption = 'Manage Menu'
+    TabOrder = 5
+    OnClick = btnManageMenuClick
   end
 end

@@ -12,6 +12,7 @@ object frmTemplate: TfrmTemplate
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   DesignSize = (
     708
     410)

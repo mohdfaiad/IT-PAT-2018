@@ -1,31 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Manager_Home_U.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home_U.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dproj,C:\Users\scilliers\Documents\PoSify\PoSify.dproj=C:\Users\scilliers\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Manager_Home_U.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\New_User_U.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\TForm_Employee_Home.dfm=C:\Users\scilliers\Documents\PoSify\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\_FormTemplate_U.dfm=C:\Users\scilliers\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\TUser_U.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\New_User_U.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Authenticate_U.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit2.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Utilities_U.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\_FormTemplate_U.pas=C:\Users\scilliers\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Logger_U.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\TForm_Employee_Home.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\Data_Module_U.dfm=C:\Users\scilliers\Documents\PoSify\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\TOrder_U.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\TItem_U.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\TForm_Employee_Home.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home_U.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Login_U.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Data_Module_U.pas=C:\Users\scilliers\Documents\PoSify\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Authenticate_U.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit2.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\Login_U.dfm=C:\Users\scilliers\Documents\PoSify\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\frmTemplate_U.pas=C:\Users\scilliers\Documents\PoSify\Unit2.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\frmTemplate_U.dfm=C:\Users\scilliers\Documents\PoSify\Unit2.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\TForm_Employee_Home.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\Login_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\Data_Module_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\Unit1.dfm=C:\Users\scilliers\Documents\PoSify\TForm_Employee_Home.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\TItem_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\Logger_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\TForm_Employee_Home.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\TOrder_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\TForm_Employee_Home.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\TForm_Employee_Home.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\scilliers\Documents\PoSify\_FormTemplate_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit2.pas=C:\Users\scilliers\Documents\PoSify\frmTemplate_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\Unit1.dfm=C:\Users\scilliers\Documents\PoSify\Data_Module_U.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\Unit1.dfm=C:\Users\scilliers\Documents\PoSify\Login_U.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\scilliers\Documents\PoSify\_FormTemplate_U.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home_U.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\New_User_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Manager_Home_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\scilliers\Documents\PoSify\Unit2.dfm=C:\Users\scilliers\Documents\PoSify\frmTemplate_U.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit2.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Authenticate_U.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Employee_Home_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit2.pas=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Authenticate_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\TUser_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.pas,C:\Users\scilliers\Documents\PoSify\Unit1.pas=C:\Users\scilliers\Documents\PoSify\Utilities_U.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dproj,C:\Users\scilliers\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\scilliers\Documents\PoSify\PoSify.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Manager_Home_U.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.dfm,C:\Users\stephan\Documents\GitHub\IT-PAT-2018\Unit1.dfm=C:\Users\stephan\Documents\GitHub\IT-PAT-2018\New_User_U.dfm</Transaction>
+    <Transaction>2018-08-07 19:16:30.253,=C:\Users\Stephan\Documents\IT-PAT-2018\ABOUT.pas</Transaction>
+    <Transaction>2018-08-07 19:16:47.467,=C:\Users\Stephan\Documents\IT-PAT-2018\Unit1.pas</Transaction>
+    <Transaction>2018-08-07 20:07:15.284,C:\Users\Stephan\Documents\IT-PAT-2018\Menu_Management_U.dfm=C:\Users\Stephan\Documents\IT-PAT-2018\Unit1.dfm</Transaction>
+    <Transaction>2018-08-07 20:07:15.284,C:\Users\Stephan\Documents\IT-PAT-2018\Menu_Management_U.pas=C:\Users\Stephan\Documents\IT-PAT-2018\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

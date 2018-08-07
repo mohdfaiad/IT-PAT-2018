@@ -13,6 +13,7 @@ type
     btnViewAccount: TButton;
     procedure btnViewAccountClick(Sender: TObject);
     procedure btnLogoutClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     currentUser: TUser;
   public
@@ -47,6 +48,11 @@ var
 begin
   form := TfrmEditUserProfile.create(self, self.getUser);
   form.showmodal;
+end;
+
+procedure TfrmTemplate.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  application.Terminate;
 end;
 
 function TfrmTemplate.getUser: TUser;

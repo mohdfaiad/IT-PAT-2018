@@ -91,3 +91,41 @@
 2018-08-04 02:09:07 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
 2018-08-04 02:09:13 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
 2018-08-04 02:09:13 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-07 08:10:57 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:10:57 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:10:57 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:11:40 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:11:40 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:11:40 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:16:15 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:16:15 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:16:15 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:16:15 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:20:26 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:20:26 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:20:26 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:20:26 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:23:29 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:23:29 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:23:29 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:23:29 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:24:44 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:24:44 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:24:44 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:24:44 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:26:08 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:26:08 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:26:08 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:26:08 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:26:34 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:26:34 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:26:34 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:26:34 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:27:14 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:27:14 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:27:14 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:27:14 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-07 08:29:30 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-07 08:29:30 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-07 08:29:30 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-07 08:29:30 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
