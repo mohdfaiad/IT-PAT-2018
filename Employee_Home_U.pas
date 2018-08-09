@@ -217,6 +217,7 @@ var
   item: TItem;
   subtotal: Double;
 begin
+  // TODO: Abbreviate order with duplicates with qty
   lstOrderItems.Clear;
   subtotal := 0;
   for item in orderItems do
