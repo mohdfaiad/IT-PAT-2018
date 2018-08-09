@@ -53,14 +53,14 @@ begin
     edtUserId.Text := '';
     edtPassword.Text := '';
 
+
     if user.GetType = employee then
     begin
-      form := TfrmEmployeeHome.Create(nil);
+      form := TfrmEmployeeHome.Create(nil, user);
     end else
     begin
-      form := TfrmManagerHome.Create(nil);
+      form := TfrmManagerHome.Create(nil, user);
     end;
-    form.setUser(user);
 
     self.Hide;
     form.Show;

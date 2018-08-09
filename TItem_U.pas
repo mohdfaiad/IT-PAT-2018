@@ -20,6 +20,7 @@ type
       function GetTitle: string;
       function GetPrice: double;
       function GetNote: string;
+      function GetCategory: string;
 
       // Mutators
       procedure SetNote(note: string);
@@ -39,6 +40,11 @@ begin
   self.title := title;
   self.category := category;
   self.price := price;
+end;
+
+function TItem.GetCategory: string;
+begin
+  result := self.category;
 end;
 
 function TItem.GetID: string;

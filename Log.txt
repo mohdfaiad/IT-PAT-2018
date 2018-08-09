@@ -129,3 +129,365 @@
 2018-08-07 08:29:30 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
 2018-08-07 08:29:30 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
 2018-08-07 08:29:30 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-08 10:17:26 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-08 10:17:26 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-08 10:17:26 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-08 10:17:26 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-08 10:17:36 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-08 10:17:36 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-08 10:17:36 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-08 10:17:46 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-08 10:17:46 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-08 10:17:46 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-08 10:17:46 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-08 10:17:52 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-08 10:17:52 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-08 10:17:52 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-08 10:17:52 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-08 10:18:13 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-08 10:24:02 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-08 10:24:02 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-08 10:24:02 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-08 10:24:02 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 03:25:59 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 03:25:59 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 03:25:59 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 03:25:59 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 03:37:49 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 03:37:49 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 03:37:49 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 03:37:49 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:05:14 PM (DATA_MODULE) - ERROR: @queryDatabase SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661' Exception class name = EOleExceptionException message = The table 'Users' is already opened exclusively by another user, or it is already open through the user interface and cannot be manipulated programmatically
+2018-08-09 04:05:32 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:05:32 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:05:32 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:05:32 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:05:34 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:06:39 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:06:39 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:06:39 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:06:39 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:06:40 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:07:03 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:07:03 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:07:03 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:07:03 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:07:04 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:07:24 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:07:24 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:07:24 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:07:24 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:07:26 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:07:38 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Items (Title, Category, Price) VALUES ('Coke', 'Beverage', 12)
+2018-08-09 04:07:38 PM (UTILITIES) - DEBUG: Successfully added new item with ID: 4
+2018-08-09 04:08:42 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:08:42 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:08:42 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:08:42 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:08:44 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:11:27 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Items (Title, Category, Price) VALUES ('Coke', 'Beverage', 13)
+2018-08-09 04:11:27 PM (UTILITIES) - DEBUG: Successfully added new item with ID: 5
+2018-08-09 04:11:39 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:20:38 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:20:38 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:20:38 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:20:38 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:20:39 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:21:34 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:21:34 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:21:34 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:21:34 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:21:36 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:21:46 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Items (Title, Category, Price) VALUES ('Sprite', 'Beverage', 13)
+2018-08-09 04:21:46 PM (UTILITIES) - DEBUG: Successfully added new item with ID: 6
+2018-08-09 04:31:10 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:31:10 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:31:10 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:31:10 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:31:12 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:31:20 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Items (Title, Category, Price) VALUES ('Stoney', 'Beverage', 13)
+2018-08-09 04:31:20 PM (UTILITIES) - DEBUG: Successfully added new item with ID: 7
+2018-08-09 04:31:28 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:33:44 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:33:44 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:33:44 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:33:44 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:34:14 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Users (FirstName, LastName, [Type], [Password], RegisterDate) VALUES ('Dylan', 'van Heerden', 1, '5f4dcc3b5aa765d61d8327deb882cf99', #2018-08-09#)
+2018-08-09 04:34:20 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:34:20 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:38:36 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:38:36 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:38:36 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:38:36 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:39:50 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 04:40:31 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:41:00 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 04:41:00 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 04:41:00 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 04:41:00 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 04:41:06 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 05:01:54 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:01:54 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+2018-08-09 05:01:54 PM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+2018-08-09 05:01:54 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+2018-08-09 05:06:40 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+2018-08-09 05:06:40 PM (UTILITIES) - ERROR: Failed login attempt with ID: 9
+2018-08-09 05:06:49 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+2018-08-09 05:06:49 PM (UTILITIES) - ERROR: Failed login attempt with ID: 9
+2018-08-09 05:06:57 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+2018-08-09 05:06:57 PM (UTILITIES) - ERROR: Failed login attempt with ID: 9
+2018-08-09 05:11:18 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+2018-08-09 05:11:18 PM (UTILITIES) - ERROR: Failed login attempt with ID: 9
+2018-08-09 05:12:11 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:12:11 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:12:11 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:44:46 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:44:46 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:44:46 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:45:48 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:45:48 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:45:48 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:46:11 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:46:11 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:46:11 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:46:50 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:46:50 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:46:50 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:47:43 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:47:43 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:47:43 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:47:43 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:47:52 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:47:52 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:47:52 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:47:52 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:48:00 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:48:00 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:48:00 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:48:00 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:48:08 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:48:08 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:48:08 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:48:08 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:48:15 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:48:15 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:48:15 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:48:15 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:48:23 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:48:23 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:48:23 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:48:23 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:50:32 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:50:32 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:50:32 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:50:32 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:56:59 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:56:59 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:56:59 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:56:59 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 05:58:09 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 05:58:09 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 05:58:09 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 05:58:10 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:39:56 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:39:56 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:39:56 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:39:56 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:40:14 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:40:14 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:40:14 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:40:14 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:40:42 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:40:42 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:40:42 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:40:42 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:40:57 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:40:57 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:40:57 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:40:57 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:42:41 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:42:41 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:42:41 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:42:41 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:42:41 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:43:01 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:43:01 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:43:01 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:43:01 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:43:01 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:44:29 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:44:29 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:44:29 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:44:29 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:44:29 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:44:47 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:44:47 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:44:47 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:44:47 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:44:47 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:45:24 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:45:24 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:45:24 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:45:24 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:45:24 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:49:30 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:49:30 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:49:30 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:49:30 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:49:30 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:50:08 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:50:08 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:50:08 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:50:08 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:50:08 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:50:43 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:50:43 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:50:43 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:50:43 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:50:43 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 06:52:01 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 06:52:01 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 06:52:01 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 06:52:04 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 06:52:04 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:00:06 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:00:06 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:00:06 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:00:06 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:00:06 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:00:13 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:00:13 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:00:13 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:00:13 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:00:13 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:00:14 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:00:51 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:00:51 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:00:51 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:00:51 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:00:51 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:00:53 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:11:28 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:11:28 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:11:28 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:11:28 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:11:28 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:11:28 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:16:16 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:16:16 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:16:16 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:16:16 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:16:16 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:16:16 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:16:59 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:16:59 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:16:59 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:16:59 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:16:59 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:16:59 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:17:42 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:17:42 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:17:42 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:17:42 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:17:42 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:17:42 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:18:10 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:18:10 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:18:10 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:18:10 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:18:10 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:18:10 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:26:39 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:26:39 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:26:39 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:26:39 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:26:39 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:26:39 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:28:11 PM (DATA_MODULE) - ERROR: @modifyDatabase INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #2018-08-09 07:27:07 PM#) Exception class name = EOleExceptionException message = Parameter object is improperly defined. Inconsistent or incomplete information was provided
+2018-08-09 07:29:11 PM (UTILITIES) - DEBUG: Failed to create order with ID: 0
+2018-08-09 07:29:29 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:29:29 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:29:29 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:29:29 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:29:29 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:29:29 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:29:35 PM (DATA_MODULE) - ERROR: @modifyDatabase INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #2018-08-09 07:29:33 PM#) Exception class name = EOleExceptionException message = Parameter object is improperly defined. Inconsistent or incomplete information was provided
+2018-08-09 07:29:37 PM (UTILITIES) - DEBUG: Failed to create order with ID: 0
+2018-08-09 07:40:11 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:40:11 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:40:11 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:40:11 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:40:11 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:40:53 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:40:53 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:40:53 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:40:53 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:40:53 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:40:53 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:40:58 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #2018-08-09#)
+2018-08-09 07:40:58 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (10, 1, '')
+2018-08-09 07:40:59 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (10, 1, '')
+2018-08-09 07:41:00 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (10, 1, '')
+2018-08-09 07:41:01 PM (UTILITIES) - DEBUG: Successfully created order with ID: 10
+2018-08-09 07:42:27 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:42:27 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:42:27 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:42:27 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:42:27 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:42:27 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:42:27 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+2018-08-09 07:42:33 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #2018-08-09#)
+2018-08-09 07:42:33 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (11, 3, '')
+2018-08-09 07:42:33 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (11, 1, '')
+2018-08-09 07:42:33 PM (UTILITIES) - DEBUG: Successfully created order with ID: 11
+2018-08-09 07:47:17 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:47:17 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:47:17 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:47:17 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:47:17 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:47:36 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:47:36 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:47:36 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:47:37 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:47:37 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:47:37 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:47:37 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+2018-08-09 07:50:26 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:50:26 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:50:26 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:50:26 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:50:26 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:50:26 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:50:26 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+2018-08-09 07:51:51 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:51:51 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:51:51 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:51:51 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:51:51 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:51:51 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:51:51 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+2018-08-09 07:54:12 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:54:12 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:54:12 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:54:12 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:54:12 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:54:13 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:54:13 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+2018-08-09 07:54:17 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #2018-08-09#)
+2018-08-09 07:54:17 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (12, 1, '')
+2018-08-09 07:54:17 PM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (12, 2, '')
+2018-08-09 07:54:17 PM (UTILITIES) - DEBUG: Successfully created order with ID: 12
+2018-08-09 07:56:00 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:56:00 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:56:00 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:56:00 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:56:00 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:56:00 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:56:00 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+2018-08-09 07:57:18 PM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+2018-08-09 07:57:18 PM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10

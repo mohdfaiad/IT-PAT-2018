@@ -19,6 +19,7 @@ type
   public
     function getUser: TUser;
     procedure setUser(user: TUser);
+    constructor create(owner: tcomponent; user: TUser); reintroduce; overload;
   end;
 
 var
@@ -48,6 +49,12 @@ var
 begin
   form := TfrmEditUserProfile.create(self, self.getUser);
   form.showmodal;
+end;
+
+constructor TfrmTemplate.create(owner: tcomponent; user: TUser);
+begin
+  inherited create(owner);
+  self.setUser(user);
 end;
 
 procedure TfrmTemplate.FormClose(Sender: TObject; var Action: TCloseAction);

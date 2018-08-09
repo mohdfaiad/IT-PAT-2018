@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Samples.Spin, Vcl.StdCtrls,
-  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.DBCtrls;
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.DBCtrls, Utilities_U;
 
 type
   TfrmManageMenu = class(TForm)
@@ -19,8 +19,10 @@ type
     btnCreate: TButton;
     navItems: TDBNavigator;
     procedure FormCreate(Sender: TObject);
+    procedure btnCreateClick(Sender: TObject);
   private
     { Private declarations }
+    categories: TStringArray;
   public
     { Public declarations }
   end;
@@ -32,12 +34,39 @@ implementation
 
 {$R *.dfm}
 
-uses Data_Module_U;
+uses Data_Module_U, TItem_U;
+
+procedure TfrmManageMenu.btnCreateClick(Sender: TObject);
+var
+  item: TItem;
+begin
+  // TODO: Validation
+  if Utilities.newItem(item, edtTitle.Text, cmbCategory.Items[cmbCategory.ItemIndex], spnPrice.Value) then
+  begin
+    data_module.tblItems.Refresh;
+    grdMenu.DataSource.DataSet.Refresh; // TODO: Fix referesh after adding
+
+    Showmessage('Successfully added ' + item.ToString);
+  end else
+  begin
+    Showmessage('Could not add item. Check logs for more information');
+  end;
+end;
 
 procedure TfrmManageMenu.FormCreate(Sender: TObject);
+var
+  category: string;
 begin
   grdMenu.DataSource.DataSet.Open;
   grdMenu.DataSource.DataSet.Refresh;
+
+  if Utilities.getCategories(categories) then
+  begin
+    for category in categories do
+    begin
+      cmbCategory.Items.Add(category);
+    end;
+  end;
 end;
 
 end.

@@ -42,7 +42,7 @@ begin
   // TODO: Store default password in config file
   if Utilities.newUser(user, 'password', edtFirstName.Text, edtLastName.Text, TUserType(cmbUserType.ItemIndex+1), Date()) then
   begin
-    ShowMessage('User created. Use default password: "password" to log in.');
+    ShowMessage('User created. Use default password: "password" to log in. Log in with ID: ' + user.GetID);
     self.sender.didCreateNewUser;
   end else
   begin
@@ -58,7 +58,6 @@ end;
 constructor TfrmNewUser.create(aowner: TComponent; sender: INewUserDelegate);
 begin
   inherited Create(aowner);
-  showmessage('new user');
   self.sender := sender;
 end;
 

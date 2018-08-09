@@ -81,6 +81,7 @@ object frmManageMenu: TfrmManageMenu
     Height = 25
     Caption = 'Create'
     TabOrder = 4
+    OnClick = btnCreateClick
   end
   object navItems: TDBNavigator
     Left = 56

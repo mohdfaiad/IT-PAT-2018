@@ -15,7 +15,6 @@ type
       items: TItemArray;
     public
       constructor Create(id: string; employee: TUser; status: string; createDate: TDateTime; items: TItemArray);
-
       // Accessors
       function GetID: string;
       function GetEmployee: TUser;

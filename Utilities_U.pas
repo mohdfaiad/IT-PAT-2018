@@ -5,6 +5,7 @@ interface
 uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHash, IdHashMessageDigest, SysUtils, Dialogs;
 
 type
+  TStringArray = array of string;
   Utilities = class
     private
       const
@@ -36,6 +37,7 @@ type
       class function newOrder(var order: TOrder; employee: TUser; status: string; createDate: TDateTime; items: TItemArray): boolean;
       class function updateOrder(var order: TOrder; newStatus: String): boolean;
       class function getOrders(var orders: TOrderArray; employee: TUser): boolean;
+      class function getCategories(var categories: TStringArray): boolean;
 
       // Misc
       class function getMD5Hash(s: string): string;
@@ -77,6 +79,26 @@ end;
 class procedure Utilities.depersistLogin;
 begin
   DeleteFile(LOGIN_CACHE_FILE);
+end;
+
+class function Utilities.getCategories(
+  var categories: TStringArray): boolean;
+var
+  qry: TADOQuery;
+begin
+  try
+    qry := data_module.queryDatabase('SELECT DISTINCT Category FROM Items', data_module.qry);
+
+    while not qry.Eof do
+    begin
+      setLength(categories, length(categories)+1);
+      categories[length(categories)-1] := qry.FieldByName('Category').AsString;
+      qry.Next;
+    end;
+    result := true;
+  except
+    result := false;
+  end;
 end;
 
 class function Utilities.getEmployees(var employees: TUserArray): boolean;
@@ -320,7 +342,7 @@ begin
   result := data_module.modifyDatabase(Format('INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (%s, %s, #%s#)', [
     employee.GetID,
     quotedStr(status),
-    FormatDateTime('c', createDate)
+    datetostr(createDate)//FormatDateTime('c', createDate)  // TODO Accomodate time
   ]), data_module.qry);
 
   order := TOrder.Create(inttostr(getLastID(data_module.qry)), employee, status, createDate, items);
@@ -333,7 +355,6 @@ begin
     item.GetID,
     quotedStr(note)
   ]), data_module.qry);
-    showmessage(booltostr(result));
   end;
 
   if result then
