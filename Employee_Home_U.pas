@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, TItem_U, ComCtrls, Math, Utilities_U,
-  TUser_U, TOrder_U, Logger_U, Data_Module_U;
+  TUser_U, TOrder_U, Logger_U, Data_Module_U, StrUtils;
 
 type
   TfrmEmployeeHome = class(TfrmTemplate)
@@ -54,12 +54,14 @@ implementation
 
 procedure TfrmEmployeeHome.btnAddClick(Sender: TObject);
 var
+  selectedItem: TItem;
   item: TItem;
 begin
   inherited;
   // Add to order
   setLength(orderItems, length(orderItems) + 1);
-  item := items[lstItems.ItemIndex];
+  selectedItem := items[lstItems.ItemIndex];
+  item := selectedItem.Copy;
   item.SetNote(edtNote.Text);
   orderItems[length(orderItems) - 1] := item;
   updateOrder;
@@ -158,9 +160,6 @@ begin
   begin
     updateOrders;
   end;
-  
-//  if sender = self then
-//    test
 end;
 
 procedure TfrmEmployeeHome.lstItemsClick(Sender: TObject);
@@ -222,7 +221,7 @@ begin
   for item in orderItems do
   begin
     subtotal := subtotal + item.GetPrice;
-    lstOrderItems.items.add(Format('%-20s%-3.2f', [item.GetTitle, item.GetPrice]));
+    lstOrderItems.items.add(Format('%-20s%-3.2f', [item.GetTitle + ifthen(length(item.GetNote) > 0, '*', ''), item.GetPrice]));
   end;
   lstOrderItems.Items.Add('');
   lstOrderItems.Items.Add(Format('Total: R%.2f', [subtotal]));

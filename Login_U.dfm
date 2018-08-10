@@ -1,7 +1,7 @@
 object frmLogin: TfrmLogin
   Left = 0
   Top = 0
-  Caption = 'frmLogin'
+  Caption = 'PoSify Login'
   ClientHeight = 364
   ClientWidth = 615
   Color = clBtnFace

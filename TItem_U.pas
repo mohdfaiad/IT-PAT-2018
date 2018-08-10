@@ -27,12 +27,18 @@ type
 
       // Auxilary
       function ToString: string;
+      function Copy: TItem;
   end;
 
   TItemArray = array of TItem;
 implementation
 
 { TItem }
+
+function TItem.Copy: TItem;
+begin
+  result := TItem.Create(self.id, self.title, self.category, self.price);
+end;
 
 constructor TItem.Create(id: string; title, category: string; price: double);
 begin
