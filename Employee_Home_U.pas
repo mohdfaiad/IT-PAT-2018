@@ -5,10 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, TItem_U, ComCtrls, Math, Utilities_U,
-  TUser_U, TOrder_U, Logger_U, Data_Module_U, StrUtils;
+  TUser_U, TOrder_U, Logger_U, Data_Module_U, StrUtils, Order_Details_U;
 
 type
-  TfrmEmployeeHome = class(TfrmTemplate)
+  TfrmEmployeeHome = class(TfrmTemplate, IOrderDetailsDelegate)
     lstItems: TListBox;
     cmbCategories: TComboBox;
     edtNote: TEdit;
@@ -29,6 +29,7 @@ type
     procedure btnConfirmClick(Sender: TObject);
     procedure btnClearOrderClick(Sender: TObject);
     procedure lstOrdersDblClick(Sender: TObject);
+    procedure lstOrderItemsDblClick(Sender: TObject);
   private
     const
       TAG: string = 'EMPLOYEE_HOME';
@@ -43,6 +44,7 @@ type
     orderItems: TItemArray;
     order: TOrder;
     orders: TOrderArray;
+    procedure didUpdateOrder;
   end;
 
 var
@@ -51,6 +53,8 @@ var
 implementation
 
 {$R *.dfm}
+
+
 
 procedure TfrmEmployeeHome.btnAddClick(Sender: TObject);
 var
@@ -107,6 +111,18 @@ begin
   filterItems;
 end;
 
+procedure TfrmEmployeeHome.didUpdateOrder;
+begin
+  orders := nil;
+  finalize(orders);
+  setLength(orders, 0);
+  // Load open orders
+  if Utilities.getIncompleteOrders(orders, getUser) then
+  begin
+    updateOrders;
+  end;
+end;
+
 procedure TfrmEmployeeHome.edtFilterChange(Sender: TObject);
 begin
   inherited;
@@ -156,7 +172,7 @@ begin
   end;
   
   // Load open orders
-  if Utilities.getOrders(orders, getUser) then
+  if Utilities.getIncompleteOrders(orders, getUser) then
   begin
     updateOrders;
   end;
@@ -180,10 +196,23 @@ begin
   end;
 end;
 
+procedure TfrmEmployeeHome.lstOrderItemsDblClick(Sender: TObject);
+var
+  item: TItem;
+begin
+  inherited;
+
+  if lstOrderItems.ItemIndex = -1 then
+    exit;
+
+  item := orderItems[lstOrderItems.ItemIndex];
+  showmessage(quotedStr(item.GetTitle) + 'note: ' + ifthen(length(item.GetNote) > 0, item.getNote, 'None'));
+end;
+
 procedure TfrmEmployeeHome.lstOrdersDblClick(Sender: TObject);
 var
   order: TOrder;
-  s: string;
+  form: TFrmOrderDetails;
 begin
   inherited;
   // TODO: Implement updating order details
@@ -193,19 +222,21 @@ begin
 
   order := orders[lstOrders.itemIndex-1];
 
-
+  form := TfrmOrderDetails.create(self, self, order);
+  form.ShowModal;
   // TODO: Form with dropdown
-  s := inputBox('Order', 'Update status', order.GetStatus);
-  if (s <> order.GetStatus) and (length(s) > 0) then
-  begin
-    begin
-      if Utilities.updateOrder(order, s) then
-      begin
-        updateOrders;
-      end;
-    end;
-    
-  end;
+
+//  s := inputBox('Order', 'Update status', order.GetStatus);
+//  if (s <> order.GetStatus) and (length(s) > 0) then
+//  begin
+//    begin
+//      if Utilities.updateOrder(order, s) then
+//      begin
+//        updateOrders;
+//      end;
+//    end;
+//
+//  end;
 
 end;
 

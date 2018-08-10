@@ -67,6 +67,9 @@ begin
   end else
   begin
     try
+      Utilities.depersistLogin;
+      cached := false;
+      self.Show;
       edtPassword.SetFocus;
     except
 

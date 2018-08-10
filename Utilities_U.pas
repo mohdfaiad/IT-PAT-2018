@@ -32,12 +32,13 @@ type
       class function newItem(var item: TItem; title, category: string; price: double): boolean;
       class function getItems(var items: TItemArray): boolean;
       class function getOrderItems(var items: TItemArray; orderID: string): boolean;
+      class function getCategories(var categories: TStringArray): boolean;
 
       // Order
       class function newOrder(var order: TOrder; employee: TUser; status: string; createDate: TDateTime; items: TItemArray): boolean;
       class function updateOrder(var order: TOrder; newStatus: String): boolean;
       class function getOrders(var orders: TOrderArray; employee: TUser): boolean;
-      class function getCategories(var categories: TStringArray): boolean;
+      class function getIncompleteOrders(var orders: TOrderArray; employee: TUser): boolean;
 
       // Misc
       class function getMD5Hash(s: string): string;
@@ -124,6 +125,29 @@ begin
     end;
     result := true;
   except
+    result := false;
+  end;
+end;
+
+class function Utilities.getIncompleteOrders(var orders: TOrderArray;
+  employee: TUser): boolean;
+var
+  allOrders: TOrderArray;
+  order: TOrder;
+begin
+  if getOrders(allOrders, employee) then
+  begin
+    for order in allOrders do
+    begin
+      if not order.IsComplete then
+      begin
+        setLength(orders, length(orders)+1);
+        orders[length(orders)-1] := order;
+      end;
+    end;
+    result := true;
+  end else
+  begin
     result := false;
   end;
 end;

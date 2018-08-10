@@ -84,6 +84,7 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     ItemHeight = 14
     ParentFont = False
     TabOrder = 6
+    OnDblClick = lstOrderItemsDblClick
   end
   object btnClearOrder: TButton
     Left = 400
