@@ -1,0 +1,1 @@
+Restaurant name\nWaiter: Fred\nDate: Youth Burger        60,00\nCoke                13,00\n2 item(s)\nSubtotal: 73,00\nTax included @ 15

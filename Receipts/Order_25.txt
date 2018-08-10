@@ -1,0 +1,9 @@
+Restaurant name
+Waiter: Fred
+Date: 2018-08-10
+Soda                13,00
+----------------------------Stoney              13,00
+--------------------------------------------------------2 item(s)
+Subtotal: 26,00
+Tax included @ 15p 59,80
+Order number: 25

@@ -1,0 +1,14 @@
+Restaurant name
+Waiter: Fred
+Date: 2018-08-10
+
+----------------------------
+Stoney              13,00
+Hello Burger        35,00
+Coke                13,00
+3 item(s)
+
+----------------------------
+Subtotal: 61,00
+Tax included @ 15p 140,30
+Order number: 28

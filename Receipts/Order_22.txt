@@ -1,0 +1,7 @@
+Restaurant name
+Waiter: Fred
+Date: Soda                13,00
+Coke                13,00
+2 item(s)
+Subtotal: 26,00
+Tax included @ 15

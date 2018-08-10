@@ -1,0 +1,8 @@
+Restaurant name
+Waiter: Fred
+Date: Hello Burger        35,00
+Soda                13,00
+2 item(s)
+Subtotal: 48,00
+Tax included @ 15p 110,40
+Order number: 23

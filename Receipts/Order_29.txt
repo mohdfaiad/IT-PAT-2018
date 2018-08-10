@@ -1,0 +1,11 @@
+Restaurant name
+Waiter: Fred
+Date: 2018-08-10
+----------------------------
+Sprite              13,00
+Youth Burger        60,00
+2 item(s)
+----------------------------
+Subtotal: 73,00
+Tax included @ 15p 167,90
+Order number: 29

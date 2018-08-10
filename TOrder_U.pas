@@ -47,7 +47,7 @@ begin
   self.status := status;
   self.createDate := date;
   self.items := items;
-  self.completeDate := 0;
+  self.completeDate := -69000;
 end;
 
 function TOrder.GetCompleteDate: TDateTime;

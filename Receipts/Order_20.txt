@@ -1,0 +1,8 @@
+Waiter: Fred\nDate: Youth Burger        60,00\nSoda                13,00\nCoke                13,00\nStoney              13,00\n4 item(s)\nSubtotal: 99,00\nTax included @ 15
+Date: Youth Burger        60,00\nSoda                13,00\nCoke                13,00\nStoney              13,00\n4 item(s)\nSubtotal: 99,00\nTax included @ 15
+Soda                13,00\nCoke                13,00\nStoney              13,00\n4 item(s)\nSubtotal: 99,00\nTax included @ 15
+Coke                13,00\nStoney              13,00\n4 item(s)\nSubtotal: 99,00\nTax included @ 15
+Stoney              13,00\n4 item(s)\nSubtotal: 99,00\nTax included @ 15
+4 item(s)\nSubtotal: 99,00\nTax included @ 15
+Subtotal: 99,00\nTax included @ 15
+Tax included @ 15

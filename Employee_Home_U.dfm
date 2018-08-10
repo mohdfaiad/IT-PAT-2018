@@ -17,6 +17,20 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Height = 13
     Caption = 'Category'
   end
+  object lblCurrentOrder: TLabel [2]
+    Left = 264
+    Top = 88
+    Width = 66
+    Height = 13
+    Caption = 'Current order'
+  end
+  object lblOpenOrders: TLabel [3]
+    Left = 488
+    Top = 88
+    Width = 60
+    Height = 13
+    Caption = 'Open orders'
+  end
   object lstItems: TListBox
     Left = 40
     Top = 136
@@ -101,6 +115,7 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Width = 97
     Height = 25
     Caption = 'Confirm order'
+    Enabled = False
     TabOrder = 8
     OnClick = btnConfirmClick
   end

@@ -6,6 +6,7 @@ uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHas
 
 type
   TStringArray = array of string;
+  TIntegerArray = array of integer;
   Utilities = class
     private
       const
@@ -28,17 +29,24 @@ type
       class function getEmployees(var employees: TUserArray): boolean;
       class function removeUser(user: TUser): boolean;
 
+      class function getOrderCount(var count: integer; user: TUser): boolean;
+      class function getRevenueGenerated(var revenue: double; user: TUser): boolean;
+
       // Item
       class function newItem(var item: TItem; title, category: string; price: double): boolean;
       class function getItems(var items: TItemArray): boolean;
       class function getOrderItems(var items: TItemArray; orderID: string): boolean;
       class function getCategories(var categories: TStringArray): boolean;
 
+      class function getMostPopularByCategory(var titles: TStringArray; var quantities: TIntegerArray; category: String): boolean;
+      class function getMostPopular(var titles: TStringArray; var quantities: TIntegerArray): boolean;
+
       // Order
       class function newOrder(var order: TOrder; employee: TUser; status: string; createDate: TDateTime; items: TItemArray): boolean;
       class function updateOrder(var order: TOrder; newStatus: String): boolean;
       class function getOrders(var orders: TOrderArray; employee: TUser): boolean;
       class function getIncompleteOrders(var orders: TOrderArray; employee: TUser): boolean;
+      class function createReceipt(order: TOrder): boolean;
 
       // Misc
       class function getMD5Hash(s: string): string;
@@ -75,6 +83,63 @@ begin
   begin
     TLogger.log(TAG, Debug, 'Failed to change password of user with ID: ' + user.getID);
   end;
+end;
+
+class function Utilities.createReceipt(order: TOrder): boolean;
+var
+  item: TItem;
+  s, line: string;
+  f: textfile;
+  i: integer;
+const
+  separator: string = '----------------------------\n';
+begin
+  // TODO: Get name from configuration file
+  s := Format('%s\nWaiter: %s\nDate: %s\n%s', [
+    'Restaurant name',
+    order.GetEmployee.GetFirstName,
+    datetostr(order.GetCreateDate),
+    separator
+  ]);
+
+  for item in order.GetItems do
+  begin
+    s := s + Format('%-20s%-3.2f\n', [item.GetTitle, item.GetPrice])
+  end;
+
+  s := Format(s + '%s item(s)\n%sSubtotal: R%.2f\nTax included @ 15p R%.2f\nOrder number: %s', [
+    inttostr(length(order.GetItems)),
+    separator,
+    order.GetTotal,
+    order.GetTotal * 1.15,
+    order.GetID
+  ]);
+
+  // Write to textfile
+  try
+    AssignFile(f, 'Receipts\Order_' + order.GetID + '.txt');
+  except
+    on E: Exception do
+    begin
+      TLogger.logException(TAG, 'createReceipt', e);
+      result := false;
+      Exit;
+    end;
+  end;
+
+  Rewrite(f);
+
+  while pos('\n', s) > 0 do
+  begin
+    line := copy(s, 1, pos('\n', s)-1);
+    s := copy(s, pos('\n', s)+2, length(s));
+    writeln(f, line);
+  end;
+  writeln(f, s);
+
+  closefile(f);
+
+  result := true;
 end;
 
 class procedure Utilities.depersistLogin;
@@ -192,6 +257,82 @@ begin
   end;
 end;
 
+class function Utilities.getMostPopular(var titles: TStringArray;
+  var quantities: TIntegerArray): boolean;
+var
+  qry: TADOQuery;
+begin
+
+  try
+    qry := data_module.queryDatabase(
+    'SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items '+
+    'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID '+
+    'WHERE Order_Item.OrderID '+
+    'IN (SELECT ID FROM Orders) '+
+    'GROUP BY Items.Title '+
+    'ORDER BY COUNT(Items.Title) DESC',
+    data_module.qry);
+
+    while not qry.Eof do
+    begin
+      setlength(titles, length(titles)+1);
+      setlength(quantities, length(quantities)+1);
+      titles[length(titles)-1] := qry.Fields[0].AsString;
+      quantities[length(quantities)-1] := qry.Fields[1].AsInteger;
+      qry.Next;
+    end;
+
+    result := true;
+  except
+    result := false;
+  end;
+end;
+
+class function Utilities.getMostPopularByCategory(var titles: TStringArray; var quantities: TIntegerArray; category: string): boolean;
+var
+  qry: TADOQuery;
+begin
+
+  try
+    qry := data_module.queryDatabase(
+    'SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items '+
+    'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID '+
+    'WHERE Order_Item.OrderID '+
+    'IN (SELECT ID FROM Orders) AND Items.Category = ' + quotedStr(category) +
+    'GROUP BY Items.Title '+
+    'ORDER BY COUNT(Items.Title) DESC',
+    data_module.qry);
+
+    while not qry.Eof do
+    begin
+      setlength(titles, length(titles)+1);
+      setlength(quantities, length(quantities)+1);
+      titles[length(titles)-1] := qry.Fields[0].AsString;
+      quantities[length(quantities)-1] := qry.Fields[1].AsInteger;
+      qry.Next;
+    end;
+
+    result := true;
+  except
+    result := false;
+  end;
+
+end;
+
+class function Utilities.getOrderCount(var count: integer;
+  user: TUser): boolean;
+var
+  qry: TADOQuery;
+begin
+  try
+    qry := data_module.queryDatabase('SELECT COUNT(ID) FROM Orders WHERE EmployeeID = ' + user.GetID,
+      data_module.qry);
+    count := qry.Fields[0].AsInteger;
+  except
+    result := false;
+  end;
+end;
+
 class function Utilities.getOrderItems(var items: TItemArray;
   orderID: string): boolean;
 var
@@ -298,6 +439,24 @@ begin
   end;
 
   result := true;
+end;
+
+class function Utilities.getRevenueGenerated(var revenue: double;
+  user: TUser): boolean;
+var
+  qry: TADOQuery;
+begin
+  try
+    qry := data_module.queryDatabase(
+    'SELECT SUM(Price) FROM Items ' +
+    'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID '+
+    'WHERE Order_Item.OrderID IN (SELECT ID FROM Orders WHERE '+
+    'EmployeeID = ' + user.GetID + ')',
+      data_module.qry);
+    revenue := qry.Fields[0].AsFloat;
+  except
+    result := false;
+  end;
 end;
 
 class function Utilities.loginUser(userID, password: string; var user: TUser;

@@ -1,0 +1,10 @@
+Restaurant name
+Waiter: Fred
+Date: 2018-08-10
+----------------------------
+Hello Burger        35,00
+1 item(s)
+----------------------------
+Subtotal: R35,00
+Tax included @ 15p R80,50
+Order number: 31

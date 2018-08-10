@@ -25,7 +25,6 @@ type
     { Private declarations }
     procedure refreshEmployees;
     procedure showDetails(employee: TUser);
-    procedure test;
   public
     { Public declarations }
     procedure didCreateNewUser;
@@ -85,12 +84,19 @@ begin
 end;
 
 procedure TfrmManagerHome.FormCreate(Sender: TObject);
+var
+  titles: TStringArray;
+  quantities: TIntegerArray;
 begin
   inherited;
   refreshEmployees;
-//  if sender = self then
-//    test;
 
+  // TODO: Charts
+  if Utilities.getMostPopularByCategory(titles, quantities, 'Beverage') then
+  begin
+    showmessage(titles[0]);
+  end;
+  
 end;
 
 procedure TfrmManagerHome.lstEmployeesClick(Sender: TObject);
@@ -120,46 +126,28 @@ begin
 end;
 
 procedure TfrmManagerHome.showDetails(employee: TUser);
+var
+  ordersTaken: integer;
+  revenueGenerated: double;
 begin
   // TODO: Show stats
   pnlDetails.visible := true;
   redDetails.Clear;
   redDetails.Lines.Add(employee.GetFullName);
   redDetails.Lines.Add('');
-  redDetails.Lines.Add('Register date ' + datetostr(employee.GetDateRegistered) + ' (' + inttostr(employee.GetDaysRegistered) + ')');
-end;
+  redDetails.Lines.Add('Register date ' + datetostr(employee.GetDateRegistered) + ' (' + inttostr(employee.GetDaysRegistered) + ' days)');
 
-procedure TfrmManagerHome.test;
-var
-  user: TUser;
-  items: TItemArray;
-  item: TItem;
-  order: TOrder;
-  orders: TOrderArray;
-begin
-  showmessage('h');
-  user := TUser.Create('2', 'Stephan', 'Cilliers', employee, now());
-  self.setUser(user);
+  redDetails.Lines.Add('');
+  
+  if Utilities.getOrderCount(ordersTaken, employee) then
+  begin
+    redDetails.Lines.Add(inttostr(ordersTaken) + ' orders processed.');
+  end;
 
-  refreshEmployees;
-
-  utilities.getOrders(orders, user);
-
-//  if Utilities.getItems(items) then
-//  begin
-//    showmessage(inttostr(length(items)));
-//  end;
-//
-//  if Utilities.newOrder(order, self.getUser, 'Preparing', Date, items) then
-//  begin
-//    showmessage(order.ToString);
-//  end;
-//
-//  if Utilities.updateOrder(order, 'Fetch') then
-//  begin
-//    showmessage(order.ToString);
-//  end;
-
+  if Utilities.getRevenueGenerated(revenueGenerated, employee) then
+  begin
+    redDetails.Lines.Add(Format('R%.2f revenue generated.', [revenueGenerated]));
+  end;
 
 end;
 
