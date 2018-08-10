@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, TItem_U, Vcl.ComCtrls, Math, Utilities_U,
+  Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, TItem_U, ComCtrls, Math, Utilities_U,
   TUser_U, TOrder_U, Logger_U, Data_Module_U;
 
 type
@@ -28,12 +28,11 @@ type
     procedure lstItemsDblClick(Sender: TObject);
     procedure btnConfirmClick(Sender: TObject);
     procedure btnClearOrderClick(Sender: TObject);
-    procedure lstOrdersClick(Sender: TObject);
+    procedure lstOrdersDblClick(Sender: TObject);
   private
     const
       TAG: string = 'EMPLOYEE_HOME';
     { Private declarations }
-    procedure test;
     procedure filterItems;
     procedure updateOrder;
     procedure updateOrders;
@@ -182,35 +181,35 @@ begin
   end;
 end;
 
-procedure TfrmEmployeeHome.lstOrdersClick(Sender: TObject);
+procedure TfrmEmployeeHome.lstOrdersDblClick(Sender: TObject);
+var
+  order: TOrder;
+  s: string;
 begin
   inherited;
   // TODO: Implement updating order details
+  // TODO: Validation
+  if lstOrders.ItemIndex = -1 then
+    exit;
+
+  order := orders[lstOrders.itemIndex-1];
+
+
+  // TODO: Form with dropdown
+  s := inputBox('Order', 'Update status', order.GetStatus);
+  if (s <> order.GetStatus) and (length(s) > 0) then
+  begin
+    begin
+      if Utilities.updateOrder(order, s) then
+      begin
+        updateOrders;
+      end;
+    end;
+    
+  end;
+
 end;
 
-procedure TfrmEmployeeHome.test;
-var
-  user: TUser;
-  item: TItem;
-  arrItems: TItemArray;
-  order: TOrder;
-begin
-  user := TUser.Create('1', 'Stephan', 'Cilliers', employee, now());
-  self.setUser(user);
-
-  item := TItem.Create('1', 'Big Daddy', 'Burger', 24.99);
-
-  setLength(arrItems, 2);
-  arrItems[0] := item;
-  arrItems[1] := item;
-  order := TOrder.Create('1', user, 'Ordered', date(), arrItems);
-//  showmessage(order.ToString);
-
-  TLogger.clear;
-  TLogger.log(TAG, debug, 'Session started');
-
-//  data_module.test;
-end;
 
 procedure TfrmEmployeeHome.updateOrder;
 var
@@ -232,12 +231,14 @@ end;
 procedure TfrmEmployeeHome.updateOrders;
 var
   order: TOrder;
+  completeDate: TDateTime;
 begin
   lstOrders.clear;
   lstOrders.Items.Add(Format('%-4s %-10s %-4s', ['ID', 'Status', 'Price']));
   for order in orders do
-  begin 
-    lstOrders.Items.Add(Format('%-4s %-10s %-4.2f', [order.GetID, order.GetStatus, order.GetTotal]));
+  begin
+    if not order.IsComplete then
+     lstOrders.Items.Add(Format('%-4s %-10s %-4.2f', [order.GetID, order.GetStatus, order.GetTotal]));
   end;
 end;
 

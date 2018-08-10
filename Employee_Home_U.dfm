@@ -116,6 +116,6 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     ItemHeight = 14
     ParentFont = False
     TabOrder = 9
-    OnClick = lstOrdersClick
+    OnDblClick = lstOrdersDblClick
   end
 end

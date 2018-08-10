@@ -2,7 +2,7 @@ unit Utilities_U;
 
 interface
 
-uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHash, IdHashMessageDigest, SysUtils, Dialogs;
+uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHash, IdHashMessageDigest, SysUtils, Dialogs, StrUtils;
 
 type
   TStringArray = array of string;
@@ -179,7 +179,7 @@ begin
       'SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items ' +
       'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID ' +
       'WHERE Order_Item.OrderID = ' + orderID,
-    data_module.qry);
+    data_module.qryAux);
 
     while not qry.Eof do
     begin
@@ -206,7 +206,8 @@ var
   qry: TADOQuery;
   order: TOrder;
   items: TItemArray;
-  id, status: string;
+  id, status, completeDate: string;
+  createDate: TDateTime;
 begin
   try
     qry := data_module.queryDatabase(Format('SELECT * FROM Orders WHERE EmployeeID = %s', [employee.GetID]), data_module.qry);
@@ -216,6 +217,8 @@ begin
       setLength(orders, length(orders)+1);
       id := qry.FieldByName('ID').AsString;
       status := qry.FieldByName('Status').AsString;
+      createDate := qry.FieldByName('CreateDate').AsDateTime;
+      completeDate := qry.FieldByName('CompleteDate').AsString;
 
       items := nil;
       finalize(items);
@@ -226,9 +229,14 @@ begin
          id,
          employee,
          status,
-         date,
+         createDate,
          items
       );
+
+      if length(completeDate) > 0 then
+      begin
+        order.SetCompleteDate(strtodate(completeDate));
+      end;
 
       orders[length(orders)-1] := order;
       qry.Next;
@@ -422,12 +430,19 @@ end;
 
 class function Utilities.updateOrder(var order: TOrder; newStatus: String): boolean;
 begin
-  result := data_module.modifyDatabase(Format('UPDATE Orders SET Status = %s WHERE ID = %s', [
+  result := data_module.modifyDatabase(Format('UPDATE Orders SET Status = %s, CompleteDate = %s WHERE ID = %s', [
     quotedStr(newStatus),
+    ifThen(lowercase(newStatus) = 'complete', '#'+datetostr(now)+'#', 'NULL'),
     order.GetID
   ]), data_module.qry);
   if result then
     order.SetStatus(newstatus);  // TODO: Does this belong here?
+
+  if lowercase(newStatus) = 'complete' then
+  begin
+    order.SetCompleteDate(now);
+  end;
+  
 
   if result then
   begin

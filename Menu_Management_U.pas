@@ -3,9 +3,9 @@ unit Menu_Management_U;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Samples.Spin, Vcl.StdCtrls,
-  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.DBCtrls, Utilities_U;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, Dialogs, DB, Spin, StdCtrls,
+  Grids, DBGrids, ExtCtrls, DBCtrls, Utilities_U;
 
 type
   TfrmManageMenu = class(TForm)

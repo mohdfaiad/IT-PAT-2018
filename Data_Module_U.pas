@@ -11,6 +11,7 @@ type
     qry: TADOQuery;
     tblItems: TADOTable;
     srcItems: TDataSource;
+    qryAux: TADOQuery;
   private
     { Private declarations }
     const

@@ -491,3 +491,403 @@
 2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
 2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
 2018-08-09 07:57:18 PM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:11:44 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 11 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/10/2018 10:11:44 AM (UTILITIES) - ERROR: Failed login attempt with ID: 11
+8/10/2018 10:12:38 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 11 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/10/2018 10:12:38 AM (UTILITIES) - ERROR: Failed login attempt with ID: 11
+8/10/2018 10:14:10 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 11 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/10/2018 10:14:10 AM (UTILITIES) - ERROR: Failed login attempt with ID: 11
+8/10/2018 10:14:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:14:27 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:14:27 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:14:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:14:27 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:14:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:14:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:20:45 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:20:45 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:20:45 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:20:45 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:20:45 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:20:45 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:20:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:21:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:21:09 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:21:09 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:21:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:21:09 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:21:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:21:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:21:27 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:21:27 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:23:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:23:00 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:23:00 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:23:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:23:00 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:23:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:23:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:23:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:23:09 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:23:09 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:23:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:23:09 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:23:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:23:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:23:44 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:23:44 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:23:44 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:23:44 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:23:44 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:23:44 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:23:44 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:24:19 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #8/10/2018#)
+8/10/2018 10:24:19 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (13, 2, '')
+8/10/2018 10:24:19 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (13, 3, '')
+8/10/2018 10:24:19 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (13, 6, '')
+8/10/2018 10:24:19 AM (UTILITIES) - DEBUG: Successfully created order with ID: 13
+8/10/2018 10:27:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 10:27:35 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 10:27:35 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 10:27:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 10:27:35 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 10:27:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 10:27:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 10:27:42 AM (DATA_MODULE) - DEBUG: Query: UPDATE Orders SET Status = 'Collect' WHERE ID = 10
+8/10/2018 10:27:42 AM (UTILITIES) - DEBUG: Successfully changed information of order with ID: 10
+8/10/2018 11:07:03 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:07:03 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:07:03 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:07:03 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:07:03 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:07:03 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:07:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:07:03 AM (UTILITIES) - ERROR: @getOrders Exception class name = EDatabaseErrorException message = qry: Field 'CreateDate' not found
+8/10/2018 11:15:11 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:15:11 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:15:11 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:15:11 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:15:11 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:15:11 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:15:11 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:15:11 AM (UTILITIES) - ERROR: @getOrders Exception class name = EDatabaseErrorException message = qry: Field 'CreateDate' not found
+8/10/2018 11:15:24 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:15:24 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:15:24 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:15:25 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:15:25 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:15:25 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:15:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:15:25 AM (UTILITIES) - ERROR: @getOrders Exception class name = EDatabaseErrorException message = qry: Field 'CreateDate' not found
+8/10/2018 11:17:24 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:17:24 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:17:24 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:17:24 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:17:24 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:17:24 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:17:24 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:17:24 AM (UTILITIES) - ERROR: @getOrders Exception class name = EDatabaseErrorException message = qry: Field 'CreateDate' not found
+8/10/2018 11:18:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:18:09 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:18:09 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:18:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:18:09 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:18:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:18:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:18:09 AM (UTILITIES) - ERROR: @getOrders Exception class name = EDatabaseErrorException message = qry: Field 'CreateDate' not found
+8/10/2018 11:19:40 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:19:40 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:19:40 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:19:40 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:19:40 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:19:40 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:19:40 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:19:56 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:19:56 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:19:56 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:19:56 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:19:57 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:19:57 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:19:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:21:26 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:21:26 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:21:26 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:21:26 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:21:26 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:21:26 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:21:26 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:23:39 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:23:39 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:23:39 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:23:39 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:23:39 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:23:39 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:23:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:23:46 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:23:46 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:23:46 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:23:46 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:23:46 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:23:46 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:23:46 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:25:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:25:47 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:25:47 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:25:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:25:47 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:25:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:25:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:25:50 AM (DATA_MODULE) - DEBUG: Query: UPDATE Orders SET Status = 'COMPLETE', CompleteDate = #8/10/2018# WHERE ID = 10
+8/10/2018 11:25:50 AM (UTILITIES) - DEBUG: Successfully changed information of order with ID: 10
+8/10/2018 11:28:06 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:28:06 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:28:06 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:28:06 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:28:06 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:28:06 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:28:06 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:28:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:28:35 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:28:35 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:28:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:28:35 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:28:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:28:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:28:40 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #8/10/2018#)
+8/10/2018 11:28:40 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (14, 3, '')
+8/10/2018 11:28:40 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (14, 1, '')
+8/10/2018 11:28:40 AM (UTILITIES) - DEBUG: Successfully created order with ID: 14
+8/10/2018 11:28:59 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:28:59 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:28:59 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:28:59 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:28:59 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:28:59 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:28:59 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:29:16 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:29:16 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:29:16 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:29:16 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:29:16 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:29:16 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:29:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:36:33 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:36:33 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:36:33 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:36:33 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:36:33 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:36:33 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:36:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:36:54 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:36:54 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:36:54 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:36:54 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:36:54 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:36:54 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:36:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:37:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:37:31 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:37:31 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:37:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:37:31 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:37:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:37:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:38:57 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:38:57 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:38:57 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:38:57 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:38:57 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:38:57 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:38:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:39:03 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (9, 'Preparing', #8/10/2018#)
+8/10/2018 11:39:03 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (15, 1, '')
+8/10/2018 11:39:03 AM (DATA_MODULE) - DEBUG: Query: INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (15, 3, '')
+8/10/2018 11:39:03 AM (UTILITIES) - DEBUG: Successfully created order with ID: 15
+8/10/2018 11:39:23 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:39:23 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:39:23 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:39:23 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:39:23 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:39:23 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:39:23 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:39:34 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:39:34 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:39:34 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:39:34 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:39:34 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:39:34 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:39:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:40:52 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:40:52 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:40:52 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:40:52 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:40:52 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:40:52 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:40:52 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:42:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:42:00 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:42:00 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:42:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:42:00 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:42:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:42:01 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:42:08 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:42:08 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:42:08 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:42:08 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:42:08 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:42:08 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:42:08 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:42:15 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:42:15 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:42:15 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:42:15 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:42:15 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:42:15 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:42:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:42:50 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:42:50 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:42:50 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:42:50 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:42:50 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:42:50 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:42:51 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:42:55 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:42:55 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:42:55 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:42:55 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:42:55 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:42:55 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:42:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:43:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:43:00 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:43:00 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:43:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:43:00 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:43:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:43:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:43:39 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:43:39 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:43:39 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:43:39 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:43:39 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:43:39 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:43:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:44:48 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:44:48 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:44:48 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:44:48 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:44:48 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:44:48 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:44:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:44:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:45:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:45:00 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:45:00 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:45:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:45:00 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:45:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:45:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:45:04 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:45:04 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/10/2018 11:45:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:46:19 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:46:19 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/10/2018 11:46:19 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:46:41 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:46:41 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/10/2018 11:46:41 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/10/2018 11:46:59 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:46:59 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:46:59 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:46:59 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:46:59 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:46:59 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:46:59 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:47:17 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:49:31 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:49:31 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/10/2018 11:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:49:42 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:49:42 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/10/2018 11:49:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:49:57 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:49:57 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/10/2018 11:49:57 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '0cc175b9c0f1b6a831c399e269772661'
+8/10/2018 11:50:04 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/10/2018 11:50:04 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/10/2018 11:50:04 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/10/2018 11:50:08 AM (DATA_MODULE) - DEBUG: Query: UPDATE Orders SET Status = 'Complete', CompleteDate = #8/10/2018# WHERE ID = 12
+8/10/2018 11:50:08 AM (UTILITIES) - DEBUG: Successfully changed information of order with ID: 12
+8/10/2018 11:50:13 AM (DATA_MODULE) - DEBUG: Query: UPDATE Orders SET Status = 'Complete', CompleteDate = #8/10/2018# WHERE ID = 10
+8/10/2018 11:50:13 AM (UTILITIES) - DEBUG: Successfully changed information of order with ID: 10
+8/10/2018 11:50:18 AM (DATA_MODULE) - DEBUG: Query: UPDATE Orders SET Status = 'Complete', CompleteDate = #8/10/2018# WHERE ID = 11
+8/10/2018 11:50:18 AM (UTILITIES) - DEBUG: Successfully changed information of order with ID: 11

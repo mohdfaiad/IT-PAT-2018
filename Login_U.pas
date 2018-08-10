@@ -66,7 +66,12 @@ begin
     form.Show;
   end else
   begin
-    edtPassword.SetFocus;
+    try
+      edtPassword.SetFocus;
+    except
+
+    end;
+
     showmessage('Failed to log in');
   end;
 

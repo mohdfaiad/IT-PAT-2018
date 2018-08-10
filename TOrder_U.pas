@@ -47,11 +47,12 @@ begin
   self.status := status;
   self.createDate := date;
   self.items := items;
+  self.completeDate := 0;
 end;
 
 function TOrder.GetCompleteDate: TDateTime;
 begin
-  result := self.completeDate;
+  completeDate := self.completeDate;
 end;
 
 function TOrder.GetCreateDate: TDateTime;
@@ -96,9 +97,7 @@ end;
 
 function TOrder.IsComplete: boolean;
 begin
-  result := false;
-  if self.completeDate > 0 then
-    result := true;
+  result := self.completeDate > 0;
 end;
 
 procedure TOrder.SetCompleteDate(completeDate: TDateTime);
