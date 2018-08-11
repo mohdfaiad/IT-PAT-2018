@@ -31,11 +31,19 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Height = 13
     Caption = 'Open orders'
   end
+  inherited pnlHeader: TPanel
+    inherited btnViewAccount: TButton
+      Hint = 'Manage account details'
+      ParentShowHint = False
+      ShowHint = True
+    end
+  end
   object lstItems: TListBox
     Left = 40
     Top = 136
     Width = 185
     Height = 177
+    Hint = 'Double click an item to quickly add to order'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -43,6 +51,8 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Font.Style = []
     ItemHeight = 14
     ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
     OnClick = lstItemsClick
     OnDblClick = lstItemsDblClick
@@ -52,6 +62,9 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 82
     Width = 121
     Height = 21
+    Hint = 'Filter items by category'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
     Text = 'All'
     OnChange = cmbCategoriesChange
@@ -63,6 +76,9 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 319
     Width = 145
     Height = 21
+    Hint = 'Note for person preparing e.g. no tomato'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
   end
   object btnAdd: TButton
@@ -70,9 +86,12 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 346
     Width = 185
     Height = 25
+    Hint = 'Add selected item to order'
     Caption = 'Add'
     Default = True
     Enabled = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 4
     OnClick = btnAddClick
   end
@@ -81,6 +100,9 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 109
     Width = 185
     Height = 21
+    Hint = 'Filter items by name'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 5
     TextHint = 'Filter'
     OnChange = edtFilterChange
@@ -90,6 +112,7 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 107
     Width = 185
     Height = 206
+    Hint = 'Double click an item to view its note'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -97,6 +120,8 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Font.Style = []
     ItemHeight = 14
     ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 6
     OnDblClick = lstOrderItemsDblClick
   end
@@ -105,7 +130,10 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 317
     Width = 49
     Height = 25
+    Hint = 'Remove all items from order'
     Caption = 'Clear'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 7
     OnClick = btnClearOrderClick
   end
@@ -114,8 +142,11 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 317
     Width = 97
     Height = 25
+    Hint = 'Place the order'
     Caption = 'Confirm order'
     Enabled = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 8
     OnClick = btnConfirmClick
   end
@@ -124,6 +155,7 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Top = 107
     Width = 185
     Height = 206
+    Hint = 'Double click an order to open it'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -131,6 +163,8 @@ inherited frmEmployeeHome: TfrmEmployeeHome
     Font.Style = []
     ItemHeight = 14
     ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 9
     OnDblClick = lstOrdersDblClick
   end

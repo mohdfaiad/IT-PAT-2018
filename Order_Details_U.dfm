@@ -25,7 +25,10 @@ object frmOrderDetails: TfrmOrderDetails
     Top = 48
     Width = 185
     Height = 161
+    Hint = 'Double click an item to view its note'
     ItemHeight = 13
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
     OnDblClick = lstItemsDblClick
   end

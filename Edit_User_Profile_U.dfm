@@ -84,7 +84,10 @@ object frmEditUserProfile: TfrmEditUserProfile
     Top = 84
     Width = 131
     Height = 21
+    Hint = 'Must be at least 6 characters'
+    ParentShowHint = False
     PasswordChar = '*'
+    ShowHint = True
     TabOrder = 4
     TextHint = 'New Password'
     OnChange = passwordFieldChanged
@@ -94,7 +97,10 @@ object frmEditUserProfile: TfrmEditUserProfile
     Top = 37
     Width = 131
     Height = 21
+    Hint = 'Default is "password"'
+    ParentShowHint = False
     PasswordChar = '*'
+    ShowHint = True
     TabOrder = 3
     TextHint = 'Old Password'
     OnChange = passwordFieldChanged
@@ -104,7 +110,10 @@ object frmEditUserProfile: TfrmEditUserProfile
     Top = 132
     Width = 131
     Height = 21
+    Hint = 'Passwords must match'
+    ParentShowHint = False
     PasswordChar = '*'
+    ShowHint = True
     TabOrder = 5
     TextHint = 'Confirm New Password'
     OnChange = passwordFieldChanged
@@ -114,9 +123,12 @@ object frmEditUserProfile: TfrmEditUserProfile
     Top = 172
     Width = 131
     Height = 25
+    Hint = 'Update password'
     Caption = 'Change'
     Default = True
     Enabled = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 6
     OnClick = btnChangePasswordClick
   end

@@ -328,8 +328,10 @@ object frmLogin: TfrmLogin
     Top = 232
     Width = 129
     Height = 21
+    Hint = 'ID issued by the manager'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 0
-    Text = 'User ID'
     TextHint = 'User ID'
   end
   object edtPassword: TEdit
@@ -337,7 +339,10 @@ object frmLogin: TfrmLogin
     Top = 259
     Width = 129
     Height = 21
+    Hint = 'Default password is "password"'
+    ParentShowHint = False
     PasswordChar = '*'
+    ShowHint = True
     TabOrder = 1
     TextHint = 'Password'
   end
@@ -348,7 +353,9 @@ object frmLogin: TfrmLogin
     Height = 25
     Caption = 'Log in'
     Default = True
-    TabOrder = 2
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 3
     OnClick = btnLoginClick
   end
   object chkRememberMe: TCheckBox
@@ -356,7 +363,10 @@ object frmLogin: TfrmLogin
     Top = 286
     Width = 129
     Height = 17
+    Hint = 'Automatically log in'
     Caption = 'Remember me'
-    TabOrder = 3
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
   end
 end

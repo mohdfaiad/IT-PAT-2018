@@ -17,7 +17,10 @@ inherited frmManagerHome: TfrmManagerHome
     Top = 96
     Width = 193
     Height = 257
+    Hint = 'All employees'
     ItemHeight = 13
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
     OnClick = lstEmployeesClick
   end
@@ -26,7 +29,10 @@ inherited frmManagerHome: TfrmManagerHome
     Top = 359
     Width = 75
     Height = 25
+    Hint = 'Create a new account'
     Caption = 'New'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
     OnClick = btnNewEmployeeClick
   end
@@ -35,8 +41,11 @@ inherited frmManagerHome: TfrmManagerHome
     Top = 359
     Width = 75
     Height = 25
+    Hint = 'Delete the user'#39's account'
     Caption = 'Remove'
     Enabled = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
     OnClick = btnRemoveEmployeeClick
   end
@@ -69,7 +78,10 @@ inherited frmManagerHome: TfrmManagerHome
     Top = 359
     Width = 97
     Height = 25
+    Hint = 'Add/remove items available for purchase.'
     Caption = 'Manage Menu'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 5
     OnClick = btnManageMenuClick
   end

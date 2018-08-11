@@ -59,7 +59,11 @@ end;
 
 procedure TfrmTemplate.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  application.Terminate;
+  try
+    application.Terminate;
+  except
+
+  end;
 end;
 
 function TfrmTemplate.getUser: TUser;

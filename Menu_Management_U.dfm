@@ -40,6 +40,7 @@ object frmManageMenu: TfrmManageMenu
     Top = 56
     Width = 337
     Height = 257
+    Hint = 'Use the navigator to remove items'
     DataSource = data_module.srcItems
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -79,7 +80,10 @@ object frmManageMenu: TfrmManageMenu
     Top = 144
     Width = 137
     Height = 25
+    Hint = 'Add item to menu'
     Caption = 'Create'
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 4
     OnClick = btnCreateClick
   end
@@ -88,7 +92,10 @@ object frmManageMenu: TfrmManageMenu
     Top = 319
     Width = 240
     Height = 25
+    Hint = 'Press the check mark to commit changes'
     DataSource = data_module.srcItems
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 5
   end
 end

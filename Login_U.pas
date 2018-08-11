@@ -38,21 +38,27 @@ var
   form: TfrmTemplate;
 begin
   // TODO: Validate input
-//
+
   if Utilities.loginUser(edtUserID.Text, edtPassword.Text, user, cached) then
   begin
     if chkRememberMe.Checked or cached then
     begin
-
       Utilities.persistLogin(edtUserId.Text, edtPassword.Text, cached);
     end else
     begin
       Utilities.depersistLogin;
     end;
 
+    if not cached then
+    begin
+      if edtPassword.Text = 'password' then
+      begin
+        Showmessage('Remember to change your password by clicking View Account');
+      end;
+    end;
+
     edtUserId.Text := '';
     edtPassword.Text := '';
-
 
     if user.GetType = employee then
     begin
@@ -66,10 +72,10 @@ begin
     form.Show;
   end else
   begin
+    Utilities.depersistLogin;
+    cached := false;
+    self.Show;
     try
-      Utilities.depersistLogin;
-      cached := false;
-      self.Show;
       edtPassword.SetFocus;
     except
 

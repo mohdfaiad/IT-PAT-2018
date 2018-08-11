@@ -88,6 +88,8 @@ var
 begin
   self.order := order;
 
+  self.Caption := 'Order ' + order.GetID + ' details';
+
   // Label
   lblDetails.Caption := order.ToString;
 

@@ -94,7 +94,7 @@ begin
   // TODO: Charts
   if Utilities.getMostPopularByCategory(titles, quantities, 'Beverage') then
   begin
-    showmessage(titles[0]);
+//    showmessage(titles[0]);
   end;
   
 end;
