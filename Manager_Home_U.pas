@@ -64,6 +64,7 @@ var
   frmNewUser: TfrmNewUser;
 begin
   inherited;
+  // Initialize new user creation process
   frmNewUser := TFrmNewUser.Create(self, self);
   frmNewUser.ShowModal;
   refreshEmployees;
@@ -75,9 +76,11 @@ var
   optionselected: integer;
 begin
   inherited;
+
   selectedUser := arrEmployees[lstEmployees.ItemIndex];
   optionselected := MessageDlg('Remove ' + selectedUser.GetFullName + '?',mtInformation, mbOKCancel, 0);
 
+  // Confirm action
   if TMsgDlgBtn(optionSelected) <> mbOK then  // ??
   begin
     if Utilities.removeUser(selectedUser) then
@@ -91,10 +94,14 @@ var
   oldName, newName: string;
 begin
   inherited;
+  // Handle possibility of name not set
   if not Utilities.getRestaurantName(oldName) then
     oldName := '[Restaurant Name]';
 
+  // Get new name
   newName := InputBox('Restaurant Name', 'Choose a name for your restaurant', oldName);
+
+  // Validate new name
   if ((newName <> oldName) and (length(newName) > 0)) then
   begin
     Utilities.setRestaurantName(newName);
@@ -111,6 +118,7 @@ var
   i: integer;
 begin
   inherited;
+  // Filter popular items by category
   lstPopularItems.clear;
   if cmbCategories.ItemIndex <= 0 then
   begin
@@ -133,6 +141,7 @@ end;
 
 procedure TfrmManagerHome.didCreateNewUser;
 begin
+  // Delegate method
   self.refreshEmployees;
 end;
 
@@ -151,6 +160,7 @@ begin
   redDetails.Lines.Add('Select an employee to view details');
 
   // TODO: Charts
+
   if Utilities.getCategories(categories) then
   begin
     for category in categories do
@@ -159,6 +169,7 @@ begin
     end;
   end;
 
+  // Initialize static analytics data
   if Utilities.getMostPopular(titles, quantities) then
   begin
     for I := 0 to length(titles)-1 do
@@ -192,9 +203,13 @@ var
   user: TUser;
 begin
   lstEmployees.clear;
+
+  // Clear employees array
   arrEmployees := nil;
   finalize(arrEmployees);
   setLength(arrEmployees, 0);
+
+  // Populate employees
   if Utilities.getEmployees(arrEmployees) then
   begin
     for user in arrEmployees do
@@ -209,18 +224,21 @@ var
   ordersTaken: integer;
   revenueGenerated: double;
 begin
+  // Name, register date
   redDetails.Clear;
   redDetails.Lines.Add(employee.GetFullName);
   redDetails.Lines.Add('');
   redDetails.Lines.Add('Register date ' + datetostr(employee.GetDateRegistered) + ' (' + inttostr(employee.GetDaysRegistered) + ' days)');
 
   redDetails.Lines.Add('');
-  
+
+  // Analytics - order count
   if Utilities.getOrderCount(ordersTaken, employee) then
   begin
     redDetails.Lines.Add(inttostr(ordersTaken) + ' orders processed.');
   end;
 
+  // Analytics - total revenue
   if Utilities.getRevenueGenerated(revenueGenerated, employee) then
   begin
     redDetails.Lines.Add(Format('R%.2f revenue generated.', [revenueGenerated]));

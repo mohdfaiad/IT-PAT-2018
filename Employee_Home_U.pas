@@ -144,10 +144,12 @@ procedure TfrmEmployeeHome.filterItems;
 var
   item: TItem;
 begin
+  // Empty filteredItems array
   filteredItems := nil;
   finalize(filteredItems);
   setLength(filteredItems, 0);
 
+  // Populate listbox
   lstItems.Clear;
   for item in items do
   begin
@@ -258,6 +260,7 @@ procedure TfrmEmployeeHome.updateOrders;
 var
   order: TOrder;
 begin
+  // Show incmplete orders
   lstOrders.clear;
   lstOrders.Items.Add(Format('%-4s %-10s %-4s', ['ID', 'Status', 'Price']));
   for order in orders do
