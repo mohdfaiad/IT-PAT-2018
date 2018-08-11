@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, Grids, DBGrids, ComCtrls, TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U, Utilities_U,
-  New_User_U;
+  New_User_U, DateUtils;
 
 type
   TfrmManagerHome = class(TfrmTemplate, INewUserDelegate)
@@ -13,14 +13,20 @@ type
     btnNewEmployee: TButton;
     btnRemoveEmployee: TButton;
     Label1: TLabel;
-    pnlDetails: TPanel;
     redDetails: TRichEdit;
     btnManageMenu: TButton;
+    lstPopularItems: TListBox;
+    lblDetails: TLabel;
+    lblPopularItems: TLabel;
+    cmbCategories: TComboBox;
+    lstLast7Days: TListBox;
+    lblLast7Days: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure lstEmployeesClick(Sender: TObject);
     procedure btnRemoveEmployeeClick(Sender: TObject);
     procedure btnNewEmployeeClick(Sender: TObject);
     procedure btnManageMenuClick(Sender: TObject);
+    procedure cmbCategoriesChange(Sender: TObject);
   private
     { Private declarations }
     procedure refreshEmployees;
@@ -78,6 +84,33 @@ begin
 
 end;
 
+procedure TfrmManagerHome.cmbCategoriesChange(Sender: TObject);
+var
+  titles: TStringArray;
+  quantities: TIntegerArray;
+  i: integer;
+begin
+  inherited;
+  lstPopularItems.clear;
+  if cmbCategories.ItemIndex <= 0 then
+  begin
+    if Utilities.getMostPopular(titles, quantities) then
+    begin
+      for I := 0 to length(titles)-1 do
+      begin
+        lstPopularItems.Items.Add(format('%-20s%-4s', [titles[i], inttostr(quantities[i])]))
+      end;
+    end;
+  end else if Utilities.getMostPopularByCategory(titles, quantities, cmbCategories.Text) then
+  begin
+    for I := 0 to length(titles)-1 do
+    begin
+      lstPopularItems.Items.Add(format('%-20s%-4s', [titles[i], inttostr(quantities[i])]))
+    end;
+  end;
+
+end;
+
 procedure TfrmManagerHome.didCreateNewUser;
 begin
   self.refreshEmployees;
@@ -85,18 +118,42 @@ end;
 
 procedure TfrmManagerHome.FormCreate(Sender: TObject);
 var
-  titles: TStringArray;
+  titles, dates: TStringArray;
   quantities: TIntegerArray;
+  revenues: TDoubleArray;
+  I: Integer;
+  categories: TStringArray;
+  category: string;
 begin
   inherited;
   refreshEmployees;
 
+  redDetails.Lines.Add('Select an employee to view details');
+
   // TODO: Charts
-  if Utilities.getMostPopularByCategory(titles, quantities, 'Beverage') then
+  if Utilities.getCategories(categories) then
   begin
-//    showmessage(titles[0]);
+    for category in categories do
+    begin
+      cmbCategories.Items.Add(category);
+    end;
   end;
-  
+
+  if Utilities.getMostPopular(titles, quantities) then
+  begin
+    for I := 0 to length(titles)-1 do
+    begin
+      lstPopularItems.Items.Add(format('%-20s%-4s', [titles[i], inttostr(quantities[i])]))
+    end;
+  end;
+
+  if Utilities.getDailyRevenue(revenues, dates, IncDay(now, -6), now) then
+  begin
+    for i := 0 to length(revenues)-1 do
+    begin
+      lstLast7Days.Items.Add(format('%-14s%8.2f', [dates[i], revenues[i]]));
+    end;
+  end;
 end;
 
 procedure TfrmManagerHome.lstEmployeesClick(Sender: TObject);
@@ -115,6 +172,8 @@ var
   user: TUser;
 begin
   lstEmployees.clear;
+  arrEmployees := nil;
+  finalize(arrEmployees);
   setLength(arrEmployees, 0);
   if Utilities.getEmployees(arrEmployees) then
   begin
@@ -130,8 +189,6 @@ var
   ordersTaken: integer;
   revenueGenerated: double;
 begin
-  // TODO: Show stats
-  pnlDetails.visible := true;
   redDetails.Clear;
   redDetails.Lines.Add(employee.GetFullName);
   redDetails.Lines.Add('');

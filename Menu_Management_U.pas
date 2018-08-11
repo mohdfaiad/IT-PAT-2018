@@ -40,8 +40,14 @@ procedure TfrmManageMenu.btnCreateClick(Sender: TObject);
 var
   item: TItem;
 begin
-  // TODO: Validation
-  if Utilities.newItem(item, edtTitle.Text, cmbCategory.Items[cmbCategory.ItemIndex], spnPrice.Value) then
+  // Validation
+  if not ((length(edtTitle.Text) > 0) and (length(cmbCategory.Text) > 0)) then
+  begin
+    Showmessage('Please provide a Title and Category');
+    exit;
+  end;
+
+  if Utilities.newItem(item, edtTitle.Text, cmbCategory.Text, spnPrice.Value) then
   begin
     data_module.tblItems.Refresh;
     grdMenu.DataSource.DataSet.Refresh; // TODO: Fix referesh after adding

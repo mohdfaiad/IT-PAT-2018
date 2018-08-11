@@ -37,7 +37,15 @@ procedure TfrmLogin.btnLoginClick(Sender: TObject);
 var
   form: TfrmTemplate;
 begin
-  // TODO: Validate input
+  // Validate input
+  if not((length(edtUserID.Text) > 0) and (length(edtPassword.Text) > 0)) then
+  begin
+    if length(edtPassword.Text) = 0 then
+      edtPassword.SetFocus;
+    if length(edtUserID.Text) = 0 then
+      edtUserID.SetFocus;
+    exit;
+  end;
 
   if Utilities.loginUser(edtUserID.Text, edtPassword.Text, user, cached) then
   begin

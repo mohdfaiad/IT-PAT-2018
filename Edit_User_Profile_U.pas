@@ -49,7 +49,19 @@ uses Utilities_U, frmTemplate_U;
 
 procedure TfrmEditUserProfile.btnChangePasswordClick(Sender: TObject);
 begin
-  // TODO: Validation
+  // Validation
+  if length(edtNewPassword.Text) < 6 then
+  begin
+    edtNewPassword.SetFocus;
+    Showmessage('New password must have at least 6 characters.');
+    Exit;
+  end else if edtNewPassword.Text <> edtNewPasswordConfirm.Text then
+  begin
+    edtNewPasswordConfirm.SetFocus;
+    Showmessage('New passwords must match.');
+    exit;
+  end;
+
   if Utilities.changePassword(userOld, edtOldPassword.Text, edtNewPassword.Text) then
   begin
     Utilities.depersistLogin;
@@ -105,9 +117,10 @@ end;
 
 procedure TfrmEditUserProfile.profileFieldChanged(sender: TObject);
 begin
-  // TODO: Validation
-  if not ((edtFirstName.Text = userold.getFirstName) and
-    (edtLastName.Text = userold.getLastName)) then
+  // Validation (different, not empty)
+  if (not ((edtFirstName.Text = userold.getFirstName) and
+    (edtLastName.Text = userold.getLastName))) and
+    (((length(edtFirstName.Text) > 0) and (length(edtLastName.Text) > 0))) then
   begin
     btnUpdate.Enabled := true;
   end else

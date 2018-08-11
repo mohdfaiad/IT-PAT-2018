@@ -90,8 +90,6 @@ begin
     total := total + item.GetPrice;
   end;
 
-  // TODO - Add VAT
-
   result := total;
 end;
 

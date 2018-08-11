@@ -38,8 +38,13 @@ procedure TfrmNewUser.btnCreateClick(Sender: TObject);
 var
   user: TUser;
 begin
-  // TODO: Validation
-  // TODO: Store default password in config file
+  // Validation
+  if not (((length(edtFirstname.Text)) > 0) and (length(edtLastName.Text) > 0)) then
+  begin
+    Showmessage('Please enter first and last name.');
+    exit;
+  end;
+
   if Utilities.newUser(user, 'password', edtFirstName.Text, edtLastName.Text, TUserType(cmbUserType.ItemIndex+1), Date()) then
   begin
     ShowMessage('User created. Use default password: "password" to log in. Log in with ID: ' + user.GetID);
@@ -49,9 +54,8 @@ begin
     ShowMessage('Something went wrong.');
   end;
 
-  self.CloseModal;
   self.Close;
-
+  self.CloseModal;
 end;
 
 

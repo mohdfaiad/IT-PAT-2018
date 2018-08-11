@@ -222,7 +222,6 @@ var
   form: TFrmOrderDetails;
 begin
   inherited;
-  // TODO: Validation
   if (lstOrders.ItemIndex = -1) or (lstOrders.ItemIndex > length(orders))  then
     exit;
 
@@ -238,7 +237,7 @@ var
   item: TItem;
   subtotal: Double;
 begin
-  // TODO: Abbreviate order with duplicates with qty
+  // IMPROVEMENT: Abbreviate order with duplicates with qty
   lstOrderItems.Clear;
   subtotal := 0;
   for item in orderItems do

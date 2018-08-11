@@ -2,11 +2,12 @@ unit Utilities_U;
 
 interface
 
-uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHash, IdHashMessageDigest, SysUtils, Dialogs, StrUtils;
+uses TUser_U, TItem_U, TOrder_U, ADODB, data_module_U, Logger_U, IdGlobal, IdHash, IdHashMessageDigest, SysUtils, Dialogs, StrUtils, DateUtils;
 
 type
   TStringArray = array of string;
   TIntegerArray = array of integer;
+  TDoubleArray = array of double;
   Utilities = class
     private
       const
@@ -31,6 +32,7 @@ type
 
       class function getOrderCount(var count: integer; user: TUser): boolean;
       class function getRevenueGenerated(var revenue: double; user: TUser): boolean;
+      class function getDailyRevenue(var revenues: TDoubleArray; var dates: TStringArray; startDate: TDateTime; endDate: TDateTime): boolean;
 
       // Item
       class function newItem(var item: TItem; title, category: string; price: double): boolean;
@@ -161,6 +163,42 @@ begin
       categories[length(categories)-1] := qry.FieldByName('Category').AsString;
       qry.Next;
     end;
+    result := true;
+  except
+    result := false;
+  end;
+end;
+
+class function Utilities.getDailyRevenue(var revenues: TDoubleArray;
+  var dates: TStringArray; startDate, endDate: TDateTime): boolean;
+var
+  qry: TADOQuery;
+  i: integer;
+begin
+  try
+
+    for I := 0 to DaysBetween(startDate, endDate) do
+    begin
+      qry := data_module.queryDatabase(Format(
+        'SELECT Sum(Price) AS Revenue '+
+        'FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID ' +
+        'WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #%s#)))',
+        [datetostr(IncDay(startDate, i))]
+      ), data_module.qry);
+
+      setLength(revenues, length(revenues)+1);
+      setLength(dates, length(dates)+1);
+
+      dates[length(dates)-1] := datetostr(IncDay(startDate, i));
+      if not qry.Eof then
+      begin
+        revenues[length(revenues)-1] := qry.Fields[0].AsFloat;
+      end else
+      begin
+        revenues[length(revenues)-1] := 0;
+      end;
+    end;
+
     result := true;
   except
     result := false;
@@ -533,14 +571,14 @@ begin
   result := data_module.modifyDatabase(Format('INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (%s, %s, #%s#)', [
     employee.GetID,
     quotedStr(status),
-    datetostr(createDate)//FormatDateTime('c', createDate)  // TODO Accomodate time
+    datetostr(createDate)//FormatDateTime('c', createDate)  // IMPROVEMENT: Accomodate time
   ]), data_module.qry);
 
   order := TOrder.Create(inttostr(getLastID(data_module.qry)), employee, status, createDate, items);
 
   for item in items do
   begin
-    note := item.GetNote; // TODO: Check if null - return empty string
+    note := item.GetNote;
     result := result and data_module.modifyDatabase(Format('INSERT INTO Order_Item (OrderID, ItemID, [Note]) VALUES (%s, %s, %s)', [
     order.GetID,
     item.GetID,
@@ -560,7 +598,6 @@ end;
 class function Utilities.newUser(var user: TUser; password: string;
   firstname, lastname: string; userType: TUserType; registerDate: TDateTime): boolean;
 begin
-  // password := getMD5Hash(password); // TODO:
   result := data_module.modifyDatabase(Format('INSERT INTO Users (FirstName, LastName, [Type], [Password], RegisterDate) VALUES (%s, %s, %s, %s, #%s#)', [
     quotedstr(firstName),
     quotedStr(lastName),
@@ -569,7 +606,11 @@ begin
     datetostr(registerdate)
   ]), data_module.qry);
 
-  result := true; // TODO: Remove
+  if result then
+  begin
+    user := TUser.Create(inttostr(getLastID(data_module.qry)), firstname, lastname, userType, registerdate);
+  end;
+
 end;
 
 class procedure Utilities.persistLogin(email, password: string; hashed: boolean);
@@ -619,7 +660,7 @@ begin
     order.GetID
   ]), data_module.qry);
   if result then
-    order.SetStatus(newstatus);  // TODO: Does this belong here?
+    order.SetStatus(newstatus);
 
   if lowercase(newStatus) = 'complete' then
   begin

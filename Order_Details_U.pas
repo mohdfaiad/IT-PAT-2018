@@ -3,9 +3,9 @@ unit Order_Details_U;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, TOrder_U, StrUtils,
-  Vcl.Menus;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, Dialogs, StdCtrls, TOrder_U, StrUtils,
+  Menus;
 
 type
   IOrderDetailsDelegate = Interface(IInterface)

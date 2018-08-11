@@ -60,7 +60,7 @@ end;
 procedure TfrmTemplate.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   try
-    application.Terminate;
+    Application.Terminate;
   except
 
   end;
