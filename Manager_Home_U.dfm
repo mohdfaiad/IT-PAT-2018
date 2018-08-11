@@ -1,6 +1,8 @@
 inherited frmManagerHome: TfrmManagerHome
   Caption = 'Manager Home'
   OnCreate = FormCreate
+  ExplicitWidth = 724
+  ExplicitHeight = 449
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
@@ -140,5 +142,14 @@ inherited frmManagerHome: TfrmManagerHome
     ItemHeight = 14
     ParentFont = False
     TabOrder = 8
+  end
+  object btnRestaurantName: TButton
+    Left = 512
+    Top = 17
+    Width = 99
+    Height = 25
+    Caption = 'Restaurant Name'
+    TabOrder = 9
+    OnClick = btnRestaurantNameClick
   end
 end

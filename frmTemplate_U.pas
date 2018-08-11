@@ -40,7 +40,6 @@ begin
   frmLogin.cached := false;
   self.currentUser.Free;
   Utilities.depersistLogin;
-//  TLogger.log(TAG, TLogType.Debug, 'Logged out user');
 end;
 
 procedure TfrmTemplate.btnViewAccountClick(Sender: TObject);
@@ -60,7 +59,7 @@ end;
 procedure TfrmTemplate.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   try
-    Application.Terminate;
+    Application.Terminate; // TODO: Fix access violation
   except
 
   end;

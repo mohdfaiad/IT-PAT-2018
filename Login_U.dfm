@@ -4,7 +4,7 @@ object frmLogin: TfrmLogin
   Caption = 'PoSify Login'
   ClientHeight = 364
   ClientWidth = 615
-  Color = clBtnFace
+  Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

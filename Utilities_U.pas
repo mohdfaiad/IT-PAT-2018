@@ -53,6 +53,8 @@ type
       // Misc
       class function getMD5Hash(s: string): string;
       class function getLastID(var query: TADOQuery { or TQuery } ): Integer;
+      class function getRestaurantName(var name: string): boolean;
+      class function setRestaurantName(name: string): boolean;
   end;
 
 implementation
@@ -90,15 +92,18 @@ end;
 class function Utilities.createReceipt(order: TOrder): boolean;
 var
   item: TItem;
-  s, line: string;
+  s, line, name: string;
   f: textfile;
   i: integer;
 const
   separator: string = '----------------------------\n';
 begin
-  // TODO: Get name from configuration file
+  // Get name from configuration file
+  if not getRestaurantName(name) then
+    name := '[Restaurant Name]';
+
   s := Format('%s\nWaiter: %s\nDate: %s\n%s', [
-    'Restaurant name',
+    name,
     order.GetEmployee.GetFirstName,
     datetostr(order.GetCreateDate),
     separator
@@ -479,6 +484,29 @@ begin
   result := true;
 end;
 
+class function Utilities.getRestaurantName(var name: string): boolean;
+var
+  f: TextFile;
+begin
+  try
+    AssignFile(f, 'restaurant_name.txt');
+    reset(f);
+    assert(not eof(f));
+  except
+    on E: Exception do
+    begin
+      TLogger.logException(TAG, 'getRestaurantName', e);
+      result := false;
+      Exit;
+    end;
+  end;
+
+  readln(f, name);
+  closefile(f);
+
+  result := true;
+end;
+
 class function Utilities.getRevenueGenerated(var revenue: double;
   user: TUser): boolean;
 var
@@ -650,6 +678,18 @@ begin
   begin
     TLogger.log(TAG, Debug, 'Failed to remove user with ID: ' + user.GetID);
   end;
+end;
+
+class function Utilities.setRestaurantName(name: string): boolean;
+var
+  f: TextFile;
+begin
+  AssignFile(f, 'restaurant_name.txt');
+  rewrite(f);
+  writeln(f, name);
+  closefile(f);
+
+  result := true;
 end;
 
 class function Utilities.updateOrder(var order: TOrder; newStatus: String): boolean;

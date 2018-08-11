@@ -42,6 +42,7 @@ type
   public
     { Public declarations }
     items: TItemArray;
+    filteredItems: TItemArray;
     categories: TStringArray;
     orderItems: TItemArray;
     order: TOrder;
@@ -66,7 +67,7 @@ begin
   inherited;
   // Add to order
   setLength(orderItems, length(orderItems) + 1);
-  selectedItem := items[lstItems.ItemIndex];
+  selectedItem := filteredItems[lstItems.ItemIndex];
   item := selectedItem.Copy;
   item.SetNote(edtNote.Text);
   orderItems[length(orderItems) - 1] := item;
@@ -76,9 +77,10 @@ begin
   // Reset
   lstItems.itemIndex := -1;
   edtFilter.Text := '';
-  cmbCategories.ItemIndex := -1;
+  cmbCategories.ItemIndex := 0;
   btnAdd.enabled := false;
   edtNote.Text := '';
+  filterItems;
 end;
 
 procedure TfrmEmployeeHome.btnClearOrderClick(Sender: TObject);
@@ -142,13 +144,19 @@ procedure TfrmEmployeeHome.filterItems;
 var
   item: TItem;
 begin
+  filteredItems := nil;
+  finalize(filteredItems);
+  setLength(filteredItems, 0);
+
   lstItems.Clear;
   for item in items do
   begin
     if ((length(edtFilter.Text) = 0) or (pos(edtFilter.Text, lowercase(item.GetTitle)) > 0)) and 
     ((cmbCategories.ItemIndex <= 0) or (item.GetCategory = cmbCategories.Text)) then
     begin
-       lstItems.items.add(Format('%-20s%-3.2f', [item.GetTitle, item.GetPrice]));  
+      setLength(filteredItems, length(filteredItems)+1);
+      filteredItems[length(filteredItems)-1] := item.Copy;
+      lstItems.items.add(Format('%-20s%-3.2f', [item.GetTitle, item.GetPrice]));
     end;
   end;
 end;
@@ -164,10 +172,7 @@ begin
   // Load items
   if Utilities.getItems(items) then
   begin
-    for item in items do
-    begin
-      lstItems.items.add(Format('%-20s%-3.2f', [item.GetTitle, item.GetPrice]));
-    end;
+    filterItems;
   end;
 
   // Load categories

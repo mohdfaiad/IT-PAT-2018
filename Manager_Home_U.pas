@@ -21,12 +21,14 @@ type
     cmbCategories: TComboBox;
     lstLast7Days: TListBox;
     lblLast7Days: TLabel;
+    btnRestaurantName: TButton;
     procedure FormCreate(Sender: TObject);
     procedure lstEmployeesClick(Sender: TObject);
     procedure btnRemoveEmployeeClick(Sender: TObject);
     procedure btnNewEmployeeClick(Sender: TObject);
     procedure btnManageMenuClick(Sender: TObject);
     procedure cmbCategoriesChange(Sender: TObject);
+    procedure btnRestaurantNameClick(Sender: TObject);
   private
     { Private declarations }
     procedure refreshEmployees;
@@ -82,6 +84,24 @@ begin
       refreshEmployees;
   end;
 
+end;
+
+procedure TfrmManagerHome.btnRestaurantNameClick(Sender: TObject);
+var
+  oldName, newName: string;
+begin
+  inherited;
+  if not Utilities.getRestaurantName(oldName) then
+    oldName := '[Restaurant Name]';
+
+  newName := InputBox('Restaurant Name', 'Choose a name for your restaurant', oldName);
+  if ((newName <> oldName) and (length(newName) > 0)) then
+  begin
+    Utilities.setRestaurantName(newName);
+  end else
+  begin
+    Utilities.setRestaurantName(oldName);
+  end;
 end;
 
 procedure TfrmManagerHome.cmbCategoriesChange(Sender: TObject);
