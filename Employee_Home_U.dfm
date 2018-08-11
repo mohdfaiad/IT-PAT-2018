@@ -1,5 +1,5 @@
 inherited frmEmployeeHome: TfrmEmployeeHome
-  Caption = 'Employee Home'
+  Caption = 'Employee Home - PoSify'
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13

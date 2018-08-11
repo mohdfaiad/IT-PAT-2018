@@ -26,5 +26,6 @@ begin
   Application.CreateForm(Tdata_module, data_module);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.ShowMainForm := false;
+  Application.Icon.LoadFromFile('icon.ico');
   Application.Run;
 end.

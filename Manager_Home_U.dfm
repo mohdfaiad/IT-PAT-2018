@@ -1,5 +1,5 @@
 inherited frmManagerHome: TfrmManagerHome
-  Caption = 'Manager Home'
+  Caption = 'Manager Home - PoSify'
   OnCreate = FormCreate
   ExplicitWidth = 724
   ExplicitHeight = 449
