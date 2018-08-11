@@ -59,6 +59,7 @@ begin
 
     if not cached then
     begin
+      // Remind user to change defualt password
       if edtPassword.Text = 'password' then
       begin
         Showmessage('Remember to change your password by clicking View Account');
@@ -93,9 +94,6 @@ begin
   end;
 
 end;
-
-
-
 
 procedure TfrmLogin.FormCreate(Sender: TObject);
 var
