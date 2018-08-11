@@ -30,18 +30,11 @@ type
       class function getEmployees(var employees: TUserArray): boolean;
       class function removeUser(user: TUser): boolean;
 
-      class function getOrderCount(var count: integer; user: TUser): boolean;
-      class function getRevenueGenerated(var revenue: double; user: TUser): boolean;
-      class function getDailyRevenue(var revenues: TDoubleArray; var dates: TStringArray; startDate: TDateTime; endDate: TDateTime): boolean;
-
       // Item
       class function newItem(var item: TItem; title, category: string; price: double): boolean;
       class function getItems(var items: TItemArray): boolean;
       class function getOrderItems(var items: TItemArray; orderID: string): boolean;
       class function getCategories(var categories: TStringArray): boolean;
-
-      class function getMostPopularByCategory(var titles: TStringArray; var quantities: TIntegerArray; category: String): boolean;
-      class function getMostPopular(var titles: TStringArray; var quantities: TIntegerArray): boolean;
 
       // Order
       class function newOrder(var order: TOrder; employee: TUser; status: string; createDate: TDateTime; items: TItemArray): boolean;
@@ -49,6 +42,13 @@ type
       class function getOrders(var orders: TOrderArray; employee: TUser): boolean;
       class function getIncompleteOrders(var orders: TOrderArray; employee: TUser): boolean;
       class function createReceipt(order: TOrder): boolean;
+
+      // Analytics
+      class function getMostPopularByCategory(var titles: TStringArray; var quantities: TIntegerArray; category: String): boolean;
+      class function getMostPopular(var titles: TStringArray; var quantities: TIntegerArray): boolean;
+      class function getOrderCount(var count: integer; user: TUser): boolean;
+      class function getRevenueGenerated(var revenue: double; user: TUser): boolean;
+      class function getDailyRevenue(var revenues: TDoubleArray; var dates: TStringArray; startDate: TDateTime; endDate: TDateTime): boolean;
 
       // Misc
       class function getMD5Hash(s: string): string;
@@ -66,6 +66,8 @@ class function Utilities.changePassword(user: TUser; oldPassword,
 var
   qry: TADOQuery;
 begin
+  { Change user's password }
+
   // Check if old password is correct
   qry := data_module.queryDatabase('SELECT * FROM Users WHERE [ID] = ' + user.getID + ' AND [Password] = ' + QuotedStr(getMD5Hash(oldPassword)), data_module.qry);
 
@@ -98,6 +100,8 @@ var
 const
   separator: string = '----------------------------\n';
 begin
+  { Generate receipt and write it to a file }
+
   // Get name from configuration file
   if not getRestaurantName(name) then
     name := '[Restaurant Name]';
@@ -159,6 +163,7 @@ class function Utilities.getCategories(
 var
   qry: TADOQuery;
 begin
+  { Get all categories present in menu }
   try
     qry := data_module.queryDatabase('SELECT DISTINCT Category FROM Items', data_module.qry);
 
@@ -180,8 +185,9 @@ var
   qry: TADOQuery;
   i: integer;
 begin
-  try
+  { Get daily revenue for a period of time }
 
+  try
     for I := 0 to DaysBetween(startDate, endDate) do
     begin
       qry := data_module.queryDatabase(Format(
@@ -215,6 +221,8 @@ var
   qry: TADOQuery;
   user: TUser;
 begin
+  { Get all users with the employee type }
+
   try
     qry := data_module.queryDatabase('SELECT * FROM Users WHERE Type = 1 ORDER BY LastName', data_module.qry);
 
@@ -243,6 +251,8 @@ var
   allOrders: TOrderArray;
   order: TOrder;
 begin
+  { Get all incomplete orders by a specific employee }
+
   if getOrders(allOrders, employee) then
   begin
     for order in allOrders do
@@ -265,6 +275,8 @@ var
   qry: TADOQuery;
   item: TItem;
 begin
+  { Get all menu items }
+
   try
     qry := data_module.queryDatabase('SELECT * FROM Items', data_module.qry);
 
@@ -291,6 +303,8 @@ class function Utilities.getMD5Hash(s: string): string;
 var
   hashMessageDigest5: TIdHashMessageDigest5;
 begin
+  { Generate hash for given string }
+
   hashMessageDigest5 := nil;
   try
     hashMessageDigest5 := TIdHashMessageDigest5.Create;
@@ -305,6 +319,7 @@ class function Utilities.getMostPopular(var titles: TStringArray;
 var
   qry: TADOQuery;
 begin
+  { Get top 5 most popular items by sales }
 
   try
     qry := data_module.queryDatabase(
@@ -335,6 +350,7 @@ class function Utilities.getMostPopularByCategory(var titles: TStringArray; var 
 var
   qry: TADOQuery;
 begin
+  { Get top 5 most popular menu items by category }
 
   try
     qry := data_module.queryDatabase(
@@ -367,6 +383,8 @@ class function Utilities.getOrderCount(var count: integer;
 var
   qry: TADOQuery;
 begin
+  { Count all the orders processed by a specific employee }
+
   try
     qry := data_module.queryDatabase('SELECT COUNT(ID) FROM Orders WHERE EmployeeID = ' + user.GetID,
       data_module.qry);
@@ -382,6 +400,8 @@ var
   qry: TADOQuery;
   item: TItem;
 begin
+  { Get all the items contained in a specific order }
+
   try
     qry := data_module.queryDatabase(
       'SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items ' +
@@ -417,6 +437,8 @@ var
   id, status, completeDate: string;
   createDate: TDateTime;
 begin
+  { Get all the orders created by a specific user }
+
   try
     qry := data_module.queryDatabase(Format('SELECT * FROM Orders WHERE EmployeeID = %s', [employee.GetID]), data_module.qry);
 
@@ -465,6 +487,8 @@ class function Utilities.getPersistedLogin(var email,
 var
   f: TextFile;
 begin
+  { Store login cridentials for automatic login }
+
   AssignFile(f, LOGIN_CACHE_FILE);
   try
     Reset(f);
@@ -488,6 +512,8 @@ class function Utilities.getRestaurantName(var name: string): boolean;
 var
   f: TextFile;
 begin
+  { Extract restaurant name from persisted text file }
+
   try
     AssignFile(f, 'restaurant_name.txt');
     reset(f);
@@ -512,6 +538,8 @@ class function Utilities.getRevenueGenerated(var revenue: double;
 var
   qry: TADOQuery;
 begin
+  { Calculate the total revenue generated by a specified user }
+
   try
     qry := data_module.queryDatabase(
     'SELECT SUM(Price) FROM Items ' +
@@ -534,6 +562,7 @@ var
   registerDate: TDateTime;
 begin
   {
+    Authenticate a user to use the system using their ID and password
     1. Check if user exists
     2. Retrieve user record
     3. Create and return TUser object
@@ -573,6 +602,8 @@ end;
 class function Utilities.newItem(var item: TItem; title, category: string;
   price: double): boolean;
 begin
+  { Create a new menu item in the database }
+
   result := data_module.modifyDatabase(Format('INSERT INTO Items (Title, Category, Price) VALUES (%s, %s, %s)', [
     quotedstr(title),
     quotedStr(category),
@@ -596,6 +627,8 @@ var
   item: TItem;
   note: string;
 begin
+  { Create a new order in the database }
+
   result := data_module.modifyDatabase(Format('INSERT INTO Orders (EmployeeID, Status, CreateDate) VALUES (%s, %s, #%s#)', [
     employee.GetID,
     quotedStr(status),
@@ -604,6 +637,7 @@ begin
 
   order := TOrder.Create(inttostr(getLastID(data_module.qry)), employee, status, createDate, items);
 
+  // Insert each item into the Order_Item junction table
   for item in items do
   begin
     note := item.GetNote;
@@ -626,6 +660,8 @@ end;
 class function Utilities.newUser(var user: TUser; password: string;
   firstname, lastname: string; userType: TUserType; registerDate: TDateTime): boolean;
 begin
+  { Create a new user }
+
   result := data_module.modifyDatabase(Format('INSERT INTO Users (FirstName, LastName, [Type], [Password], RegisterDate) VALUES (%s, %s, %s, %s, #%s#)', [
     quotedstr(firstName),
     quotedStr(lastName),
@@ -645,6 +681,8 @@ class procedure Utilities.persistLogin(email, password: string; hashed: boolean)
 var
   f: TextFile;
 begin
+  { Persist a login credentials for automatic login }
+
   TLogger.log(TAG, Debug, 'Persisting login for user with email: ' + email);
 
   //
@@ -669,6 +707,8 @@ end;
 
 class function Utilities.removeUser(user: TUser): boolean;
 begin
+  { Delete a user from the database }
+
   result := data_module.modifyDatabase(Format('DELETE FROM Users WHERE ID = %s', [user.GetID]), data_module.qry);
 
   if result then
@@ -684,6 +724,8 @@ class function Utilities.setRestaurantName(name: string): boolean;
 var
   f: TextFile;
 begin
+  { Persist restaurant name in text file }
+
   AssignFile(f, 'restaurant_name.txt');
   rewrite(f);
   writeln(f, name);
@@ -694,6 +736,8 @@ end;
 
 class function Utilities.updateOrder(var order: TOrder; newStatus: String): boolean;
 begin
+  { Update the status of an order }
+
   result := data_module.modifyDatabase(Format('UPDATE Orders SET Status = %s, CompleteDate = %s WHERE ID = %s', [
     quotedStr(newStatus),
     ifThen(lowercase(newStatus) = 'complete', '#'+datetostr(now)+'#', 'NULL'),
@@ -702,6 +746,7 @@ begin
   if result then
     order.SetStatus(newstatus);
 
+  // Handle complete order
   if lowercase(newStatus) = 'complete' then
   begin
     order.SetCompleteDate(now);
@@ -720,6 +765,8 @@ end;
 class function Utilities.updateUserInformation(user: TUser;
   var newUser: TUser): boolean;
 begin
+  { Update user information }
+
   newUser := TUser.Create(user.GetID, user.GetFirstName, user.GetLastName, user.GetType, user.GetDateRegistered);
   // Update information
   result := data_module.modifyDatabase(Format('UPDATE Users SET FirstName = %s, LastName = %s, [Type] = %s WHERE [ID] = %s', [
@@ -741,6 +788,7 @@ end;
 // http://www.swissdelphicenter.com/en/showcode.php?id=1749
 class function Utilities.getLastID(var query: TADOQuery): Integer;
 begin
+  { Get the ID of the last inserted record in the database }
   result := -1;
   try
     query.sql.clear;
