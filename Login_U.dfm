@@ -369,7 +369,7 @@ object frmLogin: TfrmLogin
     Hint = 'ID issued by the manager'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 0
+    TabOrder = 1
     TextHint = 'User ID'
   end
   object edtPassword: TEdit
@@ -381,7 +381,7 @@ object frmLogin: TfrmLogin
     ParentShowHint = False
     PasswordChar = '*'
     ShowHint = True
-    TabOrder = 1
+    TabOrder = 2
     TextHint = 'Password'
   end
   object btnLogin: TButton
@@ -393,7 +393,7 @@ object frmLogin: TfrmLogin
     Default = True
     ParentShowHint = False
     ShowHint = False
-    TabOrder = 3
+    TabOrder = 0
     OnClick = btnLoginClick
   end
   object chkRememberMe: TCheckBox
@@ -405,6 +405,6 @@ object frmLogin: TfrmLogin
     Caption = 'Remember me'
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 2
+    TabOrder = 3
   end
 end

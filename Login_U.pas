@@ -72,13 +72,16 @@ begin
     if user.GetType = employee then
     begin
       form := TfrmEmployeeHome.Create(nil, user);
+      form.Show;
     end else
     begin
-      form := TfrmManagerHome.Create(nil, user);
+//      form := TfrmManagerHome.Create(nil, user);
+      frmManagerHome.setUser(user);
+      frmManagerHome.Show;
     end;
 
     self.Hide;
-    form.Show;
+
   end else
   begin
     Utilities.depersistLogin;

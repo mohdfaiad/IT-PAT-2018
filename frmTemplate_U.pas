@@ -59,7 +59,7 @@ end;
 procedure TfrmTemplate.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   try
-    Application.Terminate; // TODO: Fix access violation
+    Application.Terminate;
   except
 
   end;
