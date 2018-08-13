@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmTemplate_U, StdCtrls, ExtCtrls, Grids, DBGrids, ComCtrls, TUser_U, TItem_U, TOrder_U, Logger_U, Data_Module_U, Utilities_U,
-  New_User_U, DateUtils;
+  New_User_U, DateUtils, TeEngine, TeeProcs, Chart, Series;
 
 type
   TfrmManagerHome = class(TfrmTemplate, INewUserDelegate)
@@ -22,6 +22,8 @@ type
     lstLast7Days: TListBox;
     lblLast7Days: TLabel;
     btnRestaurantName: TButton;
+    chrtLast7Days: TChart;
+    chrtMostPopular: TChart;
     procedure FormCreate(Sender: TObject);
     procedure lstEmployeesClick(Sender: TObject);
     procedure btnRemoveEmployeeClick(Sender: TObject);
@@ -116,6 +118,7 @@ var
   titles: TStringArray;
   quantities: TIntegerArray;
   i: integer;
+  series: TBarSeries;
 begin
   inherited;
   // Filter popular items by category
@@ -137,6 +140,17 @@ begin
     end;
   end;
 
+  series := TBarSeries.Create(self);
+  chrtMostPopular.Legend.Hide;
+  series.ParentChart := chrtMostPopular;
+
+  chrtMostPopular.SeriesList[0].Clear;
+
+  for i := 0 to length(titles)-1 do
+  begin
+    chrtMostPopular.Series[0].Add(quantities[i], titles[i], clWhite);
+    chrtMostPopular.Series[0].Marks[i].Text.Add(inttostr(quantities[i]));
+  end;
 end;
 
 procedure TfrmManagerHome.didCreateNewUser;
@@ -153,13 +167,12 @@ var
   I: Integer;
   categories: TStringArray;
   category: string;
+  series: TBarSeries;
 begin
   inherited;
   refreshEmployees;
 
   redDetails.Lines.Add('Select an employee to view details');
-
-  // TODO: Charts
 
   if Utilities.getCategories(categories) then
   begin
@@ -176,13 +189,21 @@ begin
     begin
       lstPopularItems.Items.Add(format('%-20s%-4s', [titles[i], inttostr(quantities[i])]))
     end;
+    cmbCategories.ItemIndex := 0;
+    cmbCategoriesChange(self);
   end;
 
   if Utilities.getDailyRevenue(revenues, dates, IncDay(now, -6), now) then
   begin
+    series := TBarSeries.Create(self);
+    chrtLast7Days.Legend.Hide;
+    series.ParentChart := chrtLast7Days;
+
     for i := 0 to length(revenues)-1 do
     begin
       lstLast7Days.Items.Add(format('%-14s%8.2f', [dates[i], revenues[i]]));
+      chrtLast7Days.Series[0].Add(revenues[i], dates[i], clWhite);
+      chrtLast7Days.Series[0].Marks[i].Text.Add('');
     end;
   end;
 end;

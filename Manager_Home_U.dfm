@@ -1,8 +1,10 @@
 inherited frmManagerHome: TfrmManagerHome
   Caption = 'Manager Home - PoSify'
+  ClientHeight = 492
+  ClientWidth = 883
   OnCreate = FormCreate
-  ExplicitWidth = 724
-  ExplicitHeight = 449
+  ExplicitWidth = 899
+  ExplicitHeight = 531
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel [0]
@@ -27,17 +29,23 @@ inherited frmManagerHome: TfrmManagerHome
     Caption = 'Popular items'
   end
   object lblLast7Days: TLabel [3]
-    Left = 488
+    Left = 544
     Top = 77
     Width = 55
     Height = 13
     Caption = 'Last 7 days'
   end
+  inherited pnlHeader: TPanel
+    Width = 867
+    inherited btnViewAccount: TButton
+      Left = 784
+    end
+  end
   object lstEmployees: TListBox
     Left = 24
     Top = 96
     Width = 193
-    Height = 257
+    Height = 344
     Hint = 'All employees'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -53,7 +61,7 @@ inherited frmManagerHome: TfrmManagerHome
   end
   object btnNewEmployee: TButton
     Left = 24
-    Top = 359
+    Top = 459
     Width = 75
     Height = 25
     Hint = 'Create a new account'
@@ -65,7 +73,7 @@ inherited frmManagerHome: TfrmManagerHome
   end
   object btnRemoveEmployee: TButton
     Left = 142
-    Top = 359
+    Top = 459
     Width = 75
     Height = 25
     Hint = 'Delete the user'#39's account'
@@ -77,8 +85,8 @@ inherited frmManagerHome: TfrmManagerHome
     OnClick = btnRemoveEmployeeClick
   end
   object btnManageMenu: TButton
-    Left = 576
-    Top = 359
+    Left = 770
+    Top = 459
     Width = 97
     Height = 25
     Hint = 'Add/remove items available for purchase.'
@@ -91,8 +99,8 @@ inherited frmManagerHome: TfrmManagerHome
   object lstPopularItems: TListBox
     Left = 248
     Top = 264
-    Width = 209
-    Height = 89
+    Width = 233
+    Height = 137
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -105,7 +113,7 @@ inherited frmManagerHome: TfrmManagerHome
   object redDetails: TRichEdit
     Left = 248
     Top = 96
-    Width = 209
+    Width = 273
     Height = 105
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -115,12 +123,11 @@ inherited frmManagerHome: TfrmManagerHome
     ParentFont = False
     ReadOnly = True
     TabOrder = 6
-    Zoom = 100
   end
   object cmbCategories: TComboBox
     Left = 248
     Top = 237
-    Width = 209
+    Width = 273
     Height = 21
     ItemIndex = 0
     TabOrder = 7
@@ -130,9 +137,9 @@ inherited frmManagerHome: TfrmManagerHome
       'All Categories')
   end
   object lstLast7Days: TListBox
-    Left = 488
+    Left = 544
     Top = 96
-    Width = 185
+    Width = 323
     Height = 105
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -151,5 +158,23 @@ inherited frmManagerHome: TfrmManagerHome
     Caption = 'Restaurant Name'
     TabOrder = 9
     OnClick = btnRestaurantNameClick
+  end
+  object chrtLast7Days: TChart
+    Left = 544
+    Top = 237
+    Width = 323
+    Height = 203
+    Title.Text.Strings = (
+      'Last 7 Days Revenue (R)')
+    TabOrder = 10
+  end
+  object chrtMostPopular: TChart
+    Left = 248
+    Top = 264
+    Width = 273
+    Height = 176
+    Title.Text.Strings = (
+      'Most Popular Items (Qty)')
+    TabOrder = 11
   end
 end

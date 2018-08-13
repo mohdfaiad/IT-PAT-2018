@@ -3748,3 +3748,598 @@
 8/13/2018 8:11:10 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
 8/13/2018 8:11:10 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
 8/13/2018 8:11:15 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:20:30 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:20:30 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:20:30 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:20:30 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:20:30 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:20:30 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:20:30 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:20:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:20:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:20:31 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/13/2018 8:20:35 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 16
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 17
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 18
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 19
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 20
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 21
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 22
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 23
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 24
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 25
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 26
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 27
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 28
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 29
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 30
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 31
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 32
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 33
+8/13/2018 8:20:35 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 35
+8/13/2018 8:20:44 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:20:44 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:20:44 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:21:22 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:21:22 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:21:22 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:21:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:21:37 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:21:37 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:21:37 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:21:39 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:21:44 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:21:44 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:21:44 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:21:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:21:54 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:21:54 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:21:54 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:21:55 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:22:23 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:22:23 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:22:23 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:22:25 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:22:44 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:22:45 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:22:58 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:22:58 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:23:16 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:23:21 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:23:21 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:23:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:23:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:23:47 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:24:48 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:24:51 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:24:51 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:25:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:25:13 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:25:13 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:25:27 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:25:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:25:31 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:32:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:32:55 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:32:55 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:39:32 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:39:36 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:39:36 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:39:39 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Beverage'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:39:48 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:39:48 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:39:49 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:39:51 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:39:51 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:39:53 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Beverage'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:40:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:40:06 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:40:06 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:40:08 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Beverage'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:40:11 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Burger'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:41:13 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:41:14 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:41:16 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '1844156d4166d94387f1a4ad031ca5fa'
+8/13/2018 8:41:16 AM (UTILITIES) - ERROR: Failed login attempt with ID: 2
+8/13/2018 8:41:18 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:41:18 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:41:21 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Beverage'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:41:24 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Burger'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:41:29 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Burger'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:43:29 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:43:41 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:43:42 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:43:45 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:43:45 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:43:47 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Burger'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:43:49 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Beverage'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:43:51 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Pastry'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:43:53 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Burger'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:43:55 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Beverage'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:44:15 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:44:20 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:44:20 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:45:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:45:05 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:45:05 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:45:08 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Beverage'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:45:10 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) AND Items.Category = 'Burger'GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:45:33 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:45:36 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:45:36 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:45:54 AM (DATA_MODULE) - DEBUG: Query: SELECT COUNT(ID) FROM Orders WHERE EmployeeID = 13
+8/13/2018 8:45:54 AM (DATA_MODULE) - DEBUG: Query: SELECT SUM(Price) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders WHERE EmployeeID = 13)
+8/13/2018 8:45:55 AM (DATA_MODULE) - DEBUG: Query: SELECT COUNT(ID) FROM Orders WHERE EmployeeID = 14
+8/13/2018 8:45:55 AM (DATA_MODULE) - DEBUG: Query: SELECT SUM(Price) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders WHERE EmployeeID = 14)
+8/13/2018 8:45:55 AM (DATA_MODULE) - DEBUG: Query: SELECT COUNT(ID) FROM Orders WHERE EmployeeID = 1
+8/13/2018 8:45:55 AM (DATA_MODULE) - DEBUG: Query: SELECT SUM(Price) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders WHERE EmployeeID = 1)
+8/13/2018 8:45:56 AM (DATA_MODULE) - DEBUG: Query: SELECT COUNT(ID) FROM Orders WHERE EmployeeID = 12
+8/13/2018 8:45:56 AM (DATA_MODULE) - DEBUG: Query: SELECT SUM(Price) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders WHERE EmployeeID = 12)
+8/13/2018 8:45:57 AM (DATA_MODULE) - DEBUG: Query: SELECT COUNT(ID) FROM Orders WHERE EmployeeID = 14
+8/13/2018 8:45:57 AM (DATA_MODULE) - DEBUG: Query: SELECT SUM(Price) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders WHERE EmployeeID = 14)
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:46:00 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:46:04 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:46:04 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:46:04 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:46:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:46:09 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:46:09 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:46:10 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:46:20 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:46:24 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:46:24 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:47:43 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:47:52 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/13/2018 8:47:52 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/13/2018 8:47:52 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 16
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 17
+8/13/2018 8:47:53 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 18
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 19
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 20
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 21
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 22
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 23
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 24
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 25
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 26
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 27
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 28
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 29
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 30
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 31
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 32
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 33
+8/13/2018 8:47:54 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 35
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/13/2018 8:48:02 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/13/2018 8:48:02 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 16
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 17
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 18
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 19
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 20
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 21
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 22
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 23
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 24
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 25
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 26
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 27
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 28
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 29
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 30
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 31
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 32
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 33
+8/13/2018 8:48:02 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 35
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/13/2018 8:48:09 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/13/2018 8:48:09 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 16
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 17
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 18
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 19
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 20
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 21
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 22
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 23
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 24
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 25
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 26
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 27
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 28
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 29
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 30
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 31
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 32
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 33
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 35
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:48:09 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:49:31 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/13/2018 8:49:31 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/13/2018 8:49:31 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 16
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 17
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 18
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 19
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 20
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 21
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 22
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 23
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 24
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 25
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 26
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 27
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 28
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 29
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 30
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 31
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 32
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 33
+8/13/2018 8:49:38 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 35
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 9 AND password = '5f4dcc3b5aa765d61d8327deb882cf99'
+8/13/2018 8:49:47 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 9
+8/13/2018 8:49:47 AM (UTILITIES) - DEBUG: Persisting login for user with email: 9
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Items
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Orders WHERE EmployeeID = 9
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 10
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 11
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 12
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 13
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 14
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 15
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 16
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 17
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 18
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 19
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 20
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 21
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 22
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 23
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 24
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 25
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 26
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 27
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 28
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 29
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 30
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 31
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 32
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 33
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Items.ID AS [ID], Title, Category, Price, Note FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID = 35
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:49:47 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:49:54 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:49:54 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:49:54 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:49:59 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:49:59 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:49:59 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:50:03 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:50:14 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:50:14 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:50:14 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE Type = 1 ORDER BY LastName
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT DISTINCT Category FROM Items
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE Order_Item.OrderID IN (SELECT ID FROM Orders) GROUP BY Items.Title ORDER BY COUNT(Items.Title) DESC
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/7/2018#)))
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/8/2018#)))
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/9/2018#)))
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/10/2018#)))
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/11/2018#)))
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/12/2018#)))
+8/13/2018 8:50:18 AM (DATA_MODULE) - DEBUG: Query: SELECT Sum(Price) AS Revenue FROM Items INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID WHERE (((Order_Item.OrderID) In (SELECT ID FROM Orders WHERE CreateDate = #8/13/2018#)))
+8/13/2018 8:51:15 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:51:15 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:51:15 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:51:21 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:51:21 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:51:21 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2
+8/13/2018 8:51:35 AM (DATA_MODULE) - DEBUG: Query: SELECT * FROM Users WHERE ID = 2 AND password = '0192023a7bbd73250516f069df18b500'
+8/13/2018 8:51:35 AM (UTILITIES) - DEBUG: Successfully logged in user with ID: 2
+8/13/2018 8:51:35 AM (UTILITIES) - DEBUG: Persisting login for user with email: 2

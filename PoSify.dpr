@@ -23,6 +23,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := False;
+  Application.CreateForm(TfrmManagerHome, frmManagerHome);
   Application.CreateForm(Tdata_module, data_module);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.ShowMainForm := false;
