@@ -1,0 +1,11 @@
+PoSify HQ
+Waiter: Fred
+Date: 8/15/2018
+----------------------------
+Youth Burger        60.00
+Youth Burger        60.00
+2 item(s)
+----------------------------
+Subtotal: R120.00
+Tax included @ 15p R276.00
+Order number: 36

@@ -323,7 +323,7 @@ begin
 
   try
     qry := data_module.queryDatabase(
-    'SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items '+
+    'SELECT TOP 5 Items.Title, COUNT(Items.Title) AS [Quantity] FROM Items '+
     'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID '+
     'WHERE Order_Item.OrderID '+
     'IN (SELECT ID FROM Orders) '+
@@ -354,7 +354,7 @@ begin
 
   try
     qry := data_module.queryDatabase(
-    'SELECT TOP 5 Items.Title, COUNT(Items.Title) FROM Items '+
+    'SELECT TOP 5 Items.Title, COUNT(Items.Title) AS [Quantity] FROM Items '+
     'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID '+
     'WHERE Order_Item.OrderID '+
     'IN (SELECT ID FROM Orders) AND Items.Category = ' + quotedStr(category) +
@@ -386,7 +386,7 @@ begin
   { Count all the orders processed by a specific employee }
 
   try
-    qry := data_module.queryDatabase('SELECT COUNT(ID) FROM Orders WHERE EmployeeID = ' + user.GetID,
+    qry := data_module.queryDatabase('SELECT COUNT(ID) AS [Count] FROM Orders WHERE EmployeeID = ' + user.GetID,
       data_module.qry);
     count := qry.Fields[0].AsInteger;
   except
@@ -542,7 +542,7 @@ begin
 
   try
     qry := data_module.queryDatabase(
-    'SELECT SUM(Price) FROM Items ' +
+    'SELECT SUM(Price) AS [Total] FROM Items ' +
     'INNER JOIN Order_Item ON Items.ID = Order_Item.ItemID '+
     'WHERE Order_Item.OrderID IN (SELECT ID FROM Orders WHERE '+
     'EmployeeID = ' + user.GetID + ')',
