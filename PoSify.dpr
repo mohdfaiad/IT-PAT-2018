@@ -23,8 +23,8 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := False;
-  Application.CreateForm(TfrmManagerHome, frmManagerHome);
   Application.CreateForm(Tdata_module, data_module);
+  Application.CreateForm(TfrmManagerHome, frmManagerHome);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.ShowMainForm := false;
   Application.Icon.LoadFromFile('icon.ico');
