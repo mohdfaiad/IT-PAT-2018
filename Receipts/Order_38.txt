@@ -1,0 +1,10 @@
+PoSify HQ
+Waiter: Fred
+Date: 8/16/2018
+----------------------------
+Hello Burger        35.00
+1 item(s)
+----------------------------
+Subtotal: R35.00
+Tax included @ 15p R40.25
+Order number: 38

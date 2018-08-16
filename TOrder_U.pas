@@ -85,6 +85,7 @@ var
   total: double;
   item: TItem;
 begin
+  total := 0;
   for item in items do
   begin
     total := total + item.GetPrice;

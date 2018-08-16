@@ -41,7 +41,7 @@ var
   item: TItem;
 begin
   // Validation
-  if not ((length(edtTitle.Text) > 0) and (length(cmbCategory.Text) > 0)) and (length(spnPrice.Value) >= 0) then
+  if not ((length(edtTitle.Text) > 0) and (length(cmbCategory.Text) > 0)) and (spnPrice.Value >= 0) then
   begin
     Showmessage('Please provide a Title and Category');
     exit;
